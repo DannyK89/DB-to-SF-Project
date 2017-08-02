@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/2/2017 12:11:02 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{A3286B0C-D15B-41BC-8A99-F129BDCEF808}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{BBF61C44-FC9B-4802-87BA-CF36DDC651D3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -8379,20 +8379,20 @@ namespace SC_17303f53d5f94a34838f722a63d64311.Properties {
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:CodeName>SC_17303f53d5f94a34838f722a63d64311</msb:CodeName>
 		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>SC_17303f53d5f94a34838f722a63d64311</msb:CodeName>
 		<msb:DisplayName>SC_17303f53d5f94a34838f722a63d64311</msb:DisplayName>
 		<msb:ProjectId>{B99FC93B-33F9-4242-BF0E-3040487C2DA6}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="SC_17303f53d5f94a34838f722a63d64311.csproj"/>
-		<msb:File Include="Properties\AssemblyInfo.cs"/>
 		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
 		<msb:File Include="Properties\Resources.resx"/>
 		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="Properties\Settings.Designer.cs"/>
-		<msb:File Include="main.cs"/>
 		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
 		<msb:File Include="ComponentWrapper.cs"/>
 	</msb:ItemGroup>
 </c:Project>]]></arrayElement>
@@ -8529,7 +8529,7 @@ namespace SC_17303f53d5f94a34838f722a63d64311.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAO4aglkAAAAAAAAAAOAAIiALATAAABwAAAAIAAAAAAAAEjoA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAC4QglkAAAAAAAAAAOAAIiALATAAABwAAAAIAAAAAAAAEjoA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAMA5AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -8640,7 +8640,7 @@ dABzAC4AYwBvAGQAZQAsACAAZQBuAHQAYQAuAGMAbwBkAGUAAA9JAG4AcAB1AHQAIAAwAAAVQQBk
 AG0AaQBuAFEAdQBlAHIAeQAAI1IAZQBsAGEAdABpAG8AbgBzAGgAaQBwAFEAdQBlAHIAeQAAF1MA
 ZQBsAGwAZQByAFEAdQBlAHIAeQAAcVMAQwBfADEANwAzADAAMwBmADUAMwBkADUAZgA5ADQAYQAz
 ADQAOAAzADgAZgA3ADIAMgBhADYAMwBkADYANAAzADEAMQAuAFAAcgBvAHAAZQByAHQAaQBlAHMA
-LgBSAGUAcwBvAHUAcgBjAGUAcwAAAABcG1+ucn9xSZYu5X7Anu1YAAQgAQEIAyAAAQUgAQEREQQg
+LgBSAGUAcwBvAHUAcgBjAGUAcwAAAAD4JkgnbvVqTrFjPrQb1+yZAAQgAQEIAyAAAQUgAQEREQQg
 AQEOBSABARFdBAcBETkEAAAROQUgARE5DQUAAQ4dHAkgAwESQR0IEkUDIAACBiACAg4RcQUgAR0I
 CAQgABJ1BSABEnkcBAAAEn0GIAEcEoCBBCABARwIAAESgIURgIkFIAASgI0HIAIBDhKAjQi3elxW
 GTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSSQMGElUDBhJZAwYSIAUgAQESDAkgBAEIDhJBEkUFIAEB
