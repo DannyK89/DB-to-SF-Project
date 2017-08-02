@@ -11,11 +11,112 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{0BD646B9-EE47-4C55-88A9-2BD0FC6C09B2}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{79DDF546-CDFA-42CB-8B43-9328AD7E27E5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Admin Account CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7AE4E9D7-89D7-4FCF-A8CF-28BEFCCAF111}"
+      DTS:ObjectName="Admin Account CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="20127"
+          DTS:ConnectionString="\\plinkdc1\home\IT\Development\SFLoadFiles\SSIS Data Loader\CSV Files\AdminAccount.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type"
+              DTS:DTSID="{625E461C-DFBC-4B24-A16C-5E867AD5709A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{F2278926-BD2E-4379-9D62-49D6A3578502}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{A872C022-C8E6-4925-BB1E-2BFC15720D43}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4000"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Street"
+              DTS:DTSID="{B2115473-01CF-4C2D-B1B0-11F477240757}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{C77E6270-DE06-429B-BFA1-A700510B4F7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Code"
+              DTS:DTSID="{2726A464-C5F1-4918-9D0E-2EE4E94A61B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{0DBCE597-617B-4841-97B8-CE0866CC783C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Zip"
+              DTS:DTSID="{EC4FEBDB-ED4F-4633-BB79-DEDE57815ABD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{3639DE38-803D-4F23-807C-5B60BA46825E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[PLINKDB1.WF_AccountNet]"
       DTS:CreationName="OLEDB"
@@ -675,6 +776,3445 @@
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create Admin Account CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EBFF0540-19D2-41D4-B6CE-F7D6946D72B6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create Admin Account CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Create Admin Account CSV\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create Admin Account CSV\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Admin Account CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[Admin Account CSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Type]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Type"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Type]"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[State]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Country]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Street]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="4000"
+                      cachedName="Street"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Street]"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Street]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[City]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Code]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Code"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Code]"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Code]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Name]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[Zip]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Zip"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Zip]"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Zip]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Zip]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="Zip" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Code]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[City]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Street]"
+                      codePage="20127"
+                      dataType="str"
+                      length="4000"
+                      name="Street" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[State]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Type]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[State Code]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="State Code" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Create Admin Account CSV\Get Admin Account"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Get Admin Account"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::AdminQuery</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create Admin Account CSV\Get Admin Account.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PLINKDB1.WF_AccountNet]"
+                  connectionManagerRefId="Package.ConnectionManagers[PLINKDB1.WF_AccountNet]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[BUSINESS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[BUSINESS]"
+                      length="3"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[BUSINESS]"
+                      name="BUSINESS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CODE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[CODE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CODE]"
+                      name="CODE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[NAME1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[NAME1]"
+                      length="100"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[NAME1]"
+                      name="NAME1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[NAME2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[NAME2]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[NAME2]"
+                      name="NAME2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ADDRESS1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ADDRESS1]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ADDRESS1]"
+                      name="ADDRESS1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ADDRESS2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ADDRESS2]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ADDRESS2]"
+                      name="ADDRESS2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CITY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[CITY]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CITY]"
+                      name="CITY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[STATE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[STATE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[STATE]"
+                      name="STATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ZIP]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ZIP]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ZIP]"
+                      name="ZIP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PHONE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE]"
+                      name="PHONE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PHONE2]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE2]"
+                      name="PHONE2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[FAX]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[FAX]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[FAX]"
+                      name="FAX"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[AM_BEST_RATING]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[AM_BEST_RATING]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[AM_BEST_RATING]"
+                      name="AM_BEST_RATING"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[FINANCIAL_SIZE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[FINANCIAL_SIZE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[FINANCIAL_SIZE]"
+                      name="FINANCIAL_SIZE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[FP_INDEX]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[FP_INDEX]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[FP_INDEX]"
+                      name="FP_INDEX"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PRINT_NFP]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PRINT_NFP]"
+                      length="1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PRINT_NFP]"
+                      name="PRINT_NFP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[NFP_NEG_CONFIRM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[NFP_NEG_CONFIRM]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[NFP_NEG_CONFIRM]"
+                      name="NFP_NEG_CONFIRM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PRINT_INTENT]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PRINT_INTENT]"
+                      length="1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PRINT_INTENT]"
+                      name="PRINT_INTENT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PRINT_NOTICES]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PRINT_NOTICES]"
+                      length="1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PRINT_NOTICES]"
+                      name="PRINT_NOTICES"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[COMBINE_CHECKS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[COMBINE_CHECKS]"
+                      length="1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[COMBINE_CHECKS]"
+                      name="COMBINE_CHECKS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[LIMIT_FOR_FINANCING]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[LIMIT_FOR_FINANCING]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[LIMIT_FOR_FINANCING]"
+                      name="LIMIT_FOR_FINANCING"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[STATUS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[STATUS]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[STATUS]"
+                      name="STATUS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[GROUP_CODE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[GROUP_CODE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[GROUP_CODE]"
+                      name="GROUP_CODE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[DATE_OF_ENTRY]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[DATE_OF_ENTRY]"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[DATE_OF_ENTRY]"
+                      name="DATE_OF_ENTRY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ACH_ROUTING_CODE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ACH_ROUTING_CODE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ACH_ROUTING_CODE]"
+                      name="ACH_ROUTING_CODE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ACH_BANK_ACCOUNT_NUM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ACH_BANK_ACCOUNT_NUM]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ACH_BANK_ACCOUNT_NUM]"
+                      name="ACH_BANK_ACCOUNT_NUM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ACH_BANK_ACCOUNT_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ACH_BANK_ACCOUNT_TYPE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ACH_BANK_ACCOUNT_TYPE]"
+                      name="ACH_BANK_ACCOUNT_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[COMPANY_CANCEL_FEE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[COMPANY_CANCEL_FEE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[COMPANY_CANCEL_FEE]"
+                      name="COMPANY_CANCEL_FEE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[REINSTATE_PAYEE_CODE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[REINSTATE_PAYEE_CODE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[REINSTATE_PAYEE_CODE]"
+                      name="REINSTATE_PAYEE_CODE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[REINSTATE_DAYS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[REINSTATE_DAYS]"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[REINSTATE_DAYS]"
+                      name="REINSTATE_DAYS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ENTITY_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ENTITY_ID]"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ENTITY_ID]"
+                      name="ENTITY_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[USERNAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[USERNAME]"
+                      length="200"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[USERNAME]"
+                      name="USERNAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[DATE_UPDATED]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[DATE_UPDATED]"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[DATE_UPDATED]"
+                      name="DATE_UPDATED"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE_SOURCE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PHONE_SOURCE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE_SOURCE]"
+                      name="PHONE_SOURCE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE_SOURCE2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PHONE_SOURCE2]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE_SOURCE2]"
+                      name="PHONE_SOURCE2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[EMAIL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[EMAIL]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[EMAIL]"
+                      name="EMAIL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CONTACTS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[CONTACTS]"
+                      length="150"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CONTACTS]"
+                      name="CONTACTS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[HARDWARE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[HARDWARE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[HARDWARE]"
+                      name="HARDWARE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[SOFTWARE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[SOFTWARE]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[SOFTWARE]"
+                      name="SOFTWARE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CANCEL_FORMULA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[CANCEL_FORMULA]"
+                      length="150"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CANCEL_FORMULA]"
+                      name="CANCEL_FORMULA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[REINSTATE_DAYS_ELIGIBILITY]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[REINSTATE_DAYS_ELIGIBILITY]"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[REINSTATE_DAYS_ELIGIBILITY]"
+                      name="REINSTATE_DAYS_ELIGIBILITY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[MEMO]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[MEMO]"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[MEMO]"
+                      name="MEMO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[InsurerCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[InsurerCode]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[InsurerCode]"
+                      name="InsurerCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[DealerCostPayeeCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[DealerCostPayeeCode]"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[DealerCostPayeeCode]"
+                      name="DealerCostPayeeCode"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[BUSINESS]"
+                      dataType="wstr"
+                      length="3"
+                      name="BUSINESS" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[CODE]"
+                      dataType="wstr"
+                      length="50"
+                      name="CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[NAME1]"
+                      dataType="wstr"
+                      length="100"
+                      name="NAME1" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[NAME2]"
+                      dataType="wstr"
+                      length="50"
+                      name="NAME2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ADDRESS1]"
+                      dataType="wstr"
+                      length="50"
+                      name="ADDRESS1" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ADDRESS2]"
+                      dataType="wstr"
+                      length="50"
+                      name="ADDRESS2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[CITY]"
+                      dataType="wstr"
+                      length="50"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[STATE]"
+                      dataType="wstr"
+                      length="50"
+                      name="STATE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ZIP]"
+                      dataType="wstr"
+                      length="50"
+                      name="ZIP" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PHONE]"
+                      dataType="wstr"
+                      length="50"
+                      name="PHONE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PHONE2]"
+                      dataType="wstr"
+                      length="50"
+                      name="PHONE2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[FAX]"
+                      dataType="wstr"
+                      length="50"
+                      name="FAX" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[AM_BEST_RATING]"
+                      dataType="wstr"
+                      length="50"
+                      name="AM_BEST_RATING" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[FINANCIAL_SIZE]"
+                      dataType="wstr"
+                      length="50"
+                      name="FINANCIAL_SIZE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[FP_INDEX]"
+                      dataType="wstr"
+                      length="50"
+                      name="FP_INDEX" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PRINT_NFP]"
+                      dataType="wstr"
+                      length="1"
+                      name="PRINT_NFP" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[NFP_NEG_CONFIRM]"
+                      dataType="wstr"
+                      length="50"
+                      name="NFP_NEG_CONFIRM" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PRINT_INTENT]"
+                      dataType="wstr"
+                      length="1"
+                      name="PRINT_INTENT" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PRINT_NOTICES]"
+                      dataType="wstr"
+                      length="1"
+                      name="PRINT_NOTICES" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[COMBINE_CHECKS]"
+                      dataType="wstr"
+                      length="1"
+                      name="COMBINE_CHECKS" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[LIMIT_FOR_FINANCING]"
+                      dataType="wstr"
+                      length="50"
+                      name="LIMIT_FOR_FINANCING" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[STATUS]"
+                      dataType="wstr"
+                      length="50"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[GROUP_CODE]"
+                      dataType="wstr"
+                      length="50"
+                      name="GROUP_CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[DATE_OF_ENTRY]"
+                      dataType="dbTimeStamp"
+                      name="DATE_OF_ENTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ACH_ROUTING_CODE]"
+                      dataType="wstr"
+                      length="50"
+                      name="ACH_ROUTING_CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ACH_BANK_ACCOUNT_NUM]"
+                      dataType="wstr"
+                      length="50"
+                      name="ACH_BANK_ACCOUNT_NUM" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ACH_BANK_ACCOUNT_TYPE]"
+                      dataType="wstr"
+                      length="50"
+                      name="ACH_BANK_ACCOUNT_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[COMPANY_CANCEL_FEE]"
+                      dataType="wstr"
+                      length="50"
+                      name="COMPANY_CANCEL_FEE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[REINSTATE_PAYEE_CODE]"
+                      dataType="wstr"
+                      length="50"
+                      name="REINSTATE_PAYEE_CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[REINSTATE_DAYS]"
+                      dataType="i4"
+                      name="REINSTATE_DAYS" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[ENTITY_ID]"
+                      dataType="i4"
+                      name="ENTITY_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[USERNAME]"
+                      dataType="wstr"
+                      length="200"
+                      name="USERNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[DATE_UPDATED]"
+                      dataType="dbTimeStamp"
+                      name="DATE_UPDATED" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PHONE_SOURCE]"
+                      dataType="wstr"
+                      length="50"
+                      name="PHONE_SOURCE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[PHONE_SOURCE2]"
+                      dataType="wstr"
+                      length="50"
+                      name="PHONE_SOURCE2" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[EMAIL]"
+                      dataType="wstr"
+                      length="50"
+                      name="EMAIL" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[CONTACTS]"
+                      dataType="wstr"
+                      length="150"
+                      name="CONTACTS" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[HARDWARE]"
+                      dataType="wstr"
+                      length="50"
+                      name="HARDWARE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[SOFTWARE]"
+                      dataType="wstr"
+                      length="50"
+                      name="SOFTWARE" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[CANCEL_FORMULA]"
+                      dataType="wstr"
+                      length="150"
+                      name="CANCEL_FORMULA" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[REINSTATE_DAYS_ELIGIBILITY]"
+                      dataType="i4"
+                      name="REINSTATE_DAYS_ELIGIBILITY" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[MEMO]"
+                      dataType="nText"
+                      name="MEMO" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[InsurerCode]"
+                      dataType="wstr"
+                      length="50"
+                      name="InsurerCode" />
+                    <externalMetadataColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].ExternalColumns[DealerCostPayeeCode]"
+                      dataType="wstr"
+                      length="50"
+                      name="DealerCostPayeeCode" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[BUSINESS]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[BUSINESS]"
+                      name="BUSINESS" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[CODE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[CODE]"
+                      name="CODE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[NAME1]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[NAME1]"
+                      name="NAME1" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[NAME2]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[NAME2]"
+                      name="NAME2" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ADDRESS1]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ADDRESS1]"
+                      name="ADDRESS1" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ADDRESS2]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ADDRESS2]"
+                      name="ADDRESS2" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[CITY]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[CITY]"
+                      name="CITY" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[STATE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[STATE]"
+                      name="STATE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ZIP]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ZIP]"
+                      name="ZIP" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PHONE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PHONE]"
+                      name="PHONE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PHONE2]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PHONE2]"
+                      name="PHONE2" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[FAX]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[FAX]"
+                      name="FAX" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[AM_BEST_RATING]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[AM_BEST_RATING]"
+                      name="AM_BEST_RATING" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[FINANCIAL_SIZE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[FINANCIAL_SIZE]"
+                      name="FINANCIAL_SIZE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[FP_INDEX]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[FP_INDEX]"
+                      name="FP_INDEX" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PRINT_NFP]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PRINT_NFP]"
+                      name="PRINT_NFP" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[NFP_NEG_CONFIRM]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[NFP_NEG_CONFIRM]"
+                      name="NFP_NEG_CONFIRM" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PRINT_INTENT]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PRINT_INTENT]"
+                      name="PRINT_INTENT" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PRINT_NOTICES]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PRINT_NOTICES]"
+                      name="PRINT_NOTICES" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[COMBINE_CHECKS]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[COMBINE_CHECKS]"
+                      name="COMBINE_CHECKS" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[LIMIT_FOR_FINANCING]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[LIMIT_FOR_FINANCING]"
+                      name="LIMIT_FOR_FINANCING" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[STATUS]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[STATUS]"
+                      name="STATUS" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[GROUP_CODE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[GROUP_CODE]"
+                      name="GROUP_CODE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[DATE_OF_ENTRY]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[DATE_OF_ENTRY]"
+                      name="DATE_OF_ENTRY" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ACH_ROUTING_CODE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ACH_ROUTING_CODE]"
+                      name="ACH_ROUTING_CODE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ACH_BANK_ACCOUNT_NUM]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ACH_BANK_ACCOUNT_NUM]"
+                      name="ACH_BANK_ACCOUNT_NUM" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ACH_BANK_ACCOUNT_TYPE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ACH_BANK_ACCOUNT_TYPE]"
+                      name="ACH_BANK_ACCOUNT_TYPE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[COMPANY_CANCEL_FEE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[COMPANY_CANCEL_FEE]"
+                      name="COMPANY_CANCEL_FEE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[REINSTATE_PAYEE_CODE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[REINSTATE_PAYEE_CODE]"
+                      name="REINSTATE_PAYEE_CODE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[REINSTATE_DAYS]"
+                      dataType="i4"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[REINSTATE_DAYS]"
+                      name="REINSTATE_DAYS" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ENTITY_ID]"
+                      dataType="i4"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ENTITY_ID]"
+                      name="ENTITY_ID" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[USERNAME]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[USERNAME]"
+                      name="USERNAME" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[DATE_UPDATED]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[DATE_UPDATED]"
+                      name="DATE_UPDATED" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PHONE_SOURCE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PHONE_SOURCE]"
+                      name="PHONE_SOURCE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PHONE_SOURCE2]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[PHONE_SOURCE2]"
+                      name="PHONE_SOURCE2" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[EMAIL]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[EMAIL]"
+                      name="EMAIL" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[CONTACTS]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[CONTACTS]"
+                      name="CONTACTS" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[HARDWARE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[HARDWARE]"
+                      name="HARDWARE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[SOFTWARE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[SOFTWARE]"
+                      name="SOFTWARE" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[CANCEL_FORMULA]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[CANCEL_FORMULA]"
+                      name="CANCEL_FORMULA" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[REINSTATE_DAYS_ELIGIBILITY]"
+                      dataType="i4"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[REINSTATE_DAYS_ELIGIBILITY]"
+                      name="REINSTATE_DAYS_ELIGIBILITY" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[MEMO]"
+                      dataType="nText"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[MEMO]"
+                      name="MEMO" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[InsurerCode]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[InsurerCode]"
+                      name="InsurerCode" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[DealerCostPayeeCode]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[DealerCostPayeeCode]"
+                      name="DealerCostPayeeCode" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Create Admin Account CSV\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;10"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="10">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public Output0Buffer Output0Buffer;
+
+    int InputsFinished = 0;
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+        if (Buffer.EndOfRowset)
+        {
+            InputsFinished = InputsFinished + 1;
+            if (InputsFinished == 1)
+            {
+                FinishOutputs();
+                MarkOutputsFinished();
+            }
+        }
+
+    }
+
+    public virtual void FinishOutputs()
+    {
+    }
+
+    private void MarkOutputsFinished()
+    {
+
+        if (null != Output0Buffer)
+        {
+            Output0Buffer.SetEndOfRowset();
+            Output0Buffer = null;
+        }
+
+    }
+
+    public override void PrimeOutput(int Outputs, int[] OutputIDs, PipelineBuffer[] Buffers, OutputNameMap OutputMap)
+    {
+       for(int Idx = 0; Idx < Outputs; Idx++)
+       {
+            if(OutputIDs[Idx] == GetOutputID(OutputMap, @"Output 0"))
+            {
+                Output0Buffer = new Output0Buffer(Buffers[Idx], GetColumnIndexes(OutputIDs[Idx]), OutputMap);
+            }
+        }
+
+        CreateNewOutputRows();
+
+    }
+
+    public virtual void CreateNewOutputRows()
+    {
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Output0Buffer.AddRow();
+        Output0Buffer.Code = Row.CODE + "-" + Row.BUSINESS;
+        Output0Buffer.City = Row.CITY;
+        Output0Buffer.Country = "US";
+        Output0Buffer.Name = Row.NAME1;
+        if (!Row.STATE_IsNull)
+        {
+            if (Row.STATE.Length == 2)
+                Output0Buffer.StateCode = Row.STATE;
+            else
+                Output0Buffer.State = Row.STATE;
+        }
+        string address1 = "";
+        string address2 = "";
+        if (!Row.ADDRESS1_IsNull)
+            address1 = Row.ADDRESS1.Replace(",", "").Replace("\"", "");
+        if (!Row.ADDRESS2_IsNull)
+            address2 = Row.ADDRESS2.Replace(",", "").Replace("\"", "");
+        Output0Buffer.Street = address1 + " " + address2;
+        Output0Buffer.Type = "Call Center/Seller";
+        Output0Buffer.Zip = Row.ZIP;
+    }
+
+    public override void CreateNewOutputRows()
+    {
+        /*
+          Add rows by calling the AddRow method on the member variable named "<Output Name>Buffer".
+          For example, call MyOutputBuffer.AddRow() if your output was named "MyOutput".
+        */
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String BUSINESS
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+    }
+    public bool BUSINESS_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String CODE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[1]);
+        }
+    }
+    public bool CODE_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public String NAME1
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[2]);
+        }
+    }
+    public bool NAME1_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+    }
+
+    public String NAME2
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[3]);
+        }
+    }
+    public bool NAME2_IsNull
+    {
+        get
+        {
+            return IsNull(3);
+        }
+    }
+
+    public String ADDRESS1
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[4]);
+        }
+    }
+    public bool ADDRESS1_IsNull
+    {
+        get
+        {
+            return IsNull(4);
+        }
+    }
+
+    public String ADDRESS2
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[5]);
+        }
+    }
+    public bool ADDRESS2_IsNull
+    {
+        get
+        {
+            return IsNull(5);
+        }
+    }
+
+    public String CITY
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[6]);
+        }
+    }
+    public bool CITY_IsNull
+    {
+        get
+        {
+            return IsNull(6);
+        }
+    }
+
+    public String STATE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[7]);
+        }
+    }
+    public bool STATE_IsNull
+    {
+        get
+        {
+            return IsNull(7);
+        }
+    }
+
+    public String ZIP
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[8]);
+        }
+    }
+    public bool ZIP_IsNull
+    {
+        get
+        {
+            return IsNull(8);
+        }
+    }
+
+    public String PHONE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[9]);
+        }
+    }
+    public bool PHONE_IsNull
+    {
+        get
+        {
+            return IsNull(9);
+        }
+    }
+
+    public String PHONE2
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[10]);
+        }
+    }
+    public bool PHONE2_IsNull
+    {
+        get
+        {
+            return IsNull(10);
+        }
+    }
+
+    public String FAX
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[11]);
+        }
+    }
+    public bool FAX_IsNull
+    {
+        get
+        {
+            return IsNull(11);
+        }
+    }
+
+    public String AMBESTRATING
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[12]);
+        }
+    }
+    public bool AMBESTRATING_IsNull
+    {
+        get
+        {
+            return IsNull(12);
+        }
+    }
+
+    public String FINANCIALSIZE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[13]);
+        }
+    }
+    public bool FINANCIALSIZE_IsNull
+    {
+        get
+        {
+            return IsNull(13);
+        }
+    }
+
+    public String FPINDEX
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[14]);
+        }
+    }
+    public bool FPINDEX_IsNull
+    {
+        get
+        {
+            return IsNull(14);
+        }
+    }
+
+    public String PRINTNFP
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[15]);
+        }
+    }
+    public bool PRINTNFP_IsNull
+    {
+        get
+        {
+            return IsNull(15);
+        }
+    }
+
+    public String NFPNEGCONFIRM
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[16]);
+        }
+    }
+    public bool NFPNEGCONFIRM_IsNull
+    {
+        get
+        {
+            return IsNull(16);
+        }
+    }
+
+    public String PRINTINTENT
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[17]);
+        }
+    }
+    public bool PRINTINTENT_IsNull
+    {
+        get
+        {
+            return IsNull(17);
+        }
+    }
+
+    public String PRINTNOTICES
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[18]);
+        }
+    }
+    public bool PRINTNOTICES_IsNull
+    {
+        get
+        {
+            return IsNull(18);
+        }
+    }
+
+    public String COMBINECHECKS
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[19]);
+        }
+    }
+    public bool COMBINECHECKS_IsNull
+    {
+        get
+        {
+            return IsNull(19);
+        }
+    }
+
+    public String LIMITFORFINANCING
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[20]);
+        }
+    }
+    public bool LIMITFORFINANCING_IsNull
+    {
+        get
+        {
+            return IsNull(20);
+        }
+    }
+
+    public String STATUS
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[21]);
+        }
+    }
+    public bool STATUS_IsNull
+    {
+        get
+        {
+            return IsNull(21);
+        }
+    }
+
+    public String GROUPCODE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[22]);
+        }
+    }
+    public bool GROUPCODE_IsNull
+    {
+        get
+        {
+            return IsNull(22);
+        }
+    }
+
+    public DateTime DATEOFENTRY
+    {
+        get
+        {
+            return Buffer.GetDateTime(BufferColumnIndexes[23]);
+        }
+    }
+    public bool DATEOFENTRY_IsNull
+    {
+        get
+        {
+            return IsNull(23);
+        }
+    }
+
+    public String ACHROUTINGCODE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[24]);
+        }
+    }
+    public bool ACHROUTINGCODE_IsNull
+    {
+        get
+        {
+            return IsNull(24);
+        }
+    }
+
+    public String ACHBANKACCOUNTNUM
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[25]);
+        }
+    }
+    public bool ACHBANKACCOUNTNUM_IsNull
+    {
+        get
+        {
+            return IsNull(25);
+        }
+    }
+
+    public String ACHBANKACCOUNTTYPE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[26]);
+        }
+    }
+    public bool ACHBANKACCOUNTTYPE_IsNull
+    {
+        get
+        {
+            return IsNull(26);
+        }
+    }
+
+    public String COMPANYCANCELFEE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[27]);
+        }
+    }
+    public bool COMPANYCANCELFEE_IsNull
+    {
+        get
+        {
+            return IsNull(27);
+        }
+    }
+
+    public String REINSTATEPAYEECODE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[28]);
+        }
+    }
+    public bool REINSTATEPAYEECODE_IsNull
+    {
+        get
+        {
+            return IsNull(28);
+        }
+    }
+
+    public Int32 REINSTATEDAYS
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[29]);
+        }
+    }
+    public bool REINSTATEDAYS_IsNull
+    {
+        get
+        {
+            return IsNull(29);
+        }
+    }
+
+    public Int32 ENTITYID
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[30]);
+        }
+    }
+    public bool ENTITYID_IsNull
+    {
+        get
+        {
+            return IsNull(30);
+        }
+    }
+
+    public String USERNAME
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[31]);
+        }
+    }
+    public bool USERNAME_IsNull
+    {
+        get
+        {
+            return IsNull(31);
+        }
+    }
+
+    public DateTime DATEUPDATED
+    {
+        get
+        {
+            return Buffer.GetDateTime(BufferColumnIndexes[32]);
+        }
+    }
+    public bool DATEUPDATED_IsNull
+    {
+        get
+        {
+            return IsNull(32);
+        }
+    }
+
+    public String PHONESOURCE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[33]);
+        }
+    }
+    public bool PHONESOURCE_IsNull
+    {
+        get
+        {
+            return IsNull(33);
+        }
+    }
+
+    public String PHONESOURCE2
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[34]);
+        }
+    }
+    public bool PHONESOURCE2_IsNull
+    {
+        get
+        {
+            return IsNull(34);
+        }
+    }
+
+    public String EMAIL
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[35]);
+        }
+    }
+    public bool EMAIL_IsNull
+    {
+        get
+        {
+            return IsNull(35);
+        }
+    }
+
+    public String CONTACTS
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[36]);
+        }
+    }
+    public bool CONTACTS_IsNull
+    {
+        get
+        {
+            return IsNull(36);
+        }
+    }
+
+    public String HARDWARE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[37]);
+        }
+    }
+    public bool HARDWARE_IsNull
+    {
+        get
+        {
+            return IsNull(37);
+        }
+    }
+
+    public String SOFTWARE
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[38]);
+        }
+    }
+    public bool SOFTWARE_IsNull
+    {
+        get
+        {
+            return IsNull(38);
+        }
+    }
+
+    public String CANCELFORMULA
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[39]);
+        }
+    }
+    public bool CANCELFORMULA_IsNull
+    {
+        get
+        {
+            return IsNull(39);
+        }
+    }
+
+    public Int32 REINSTATEDAYSELIGIBILITY
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[40]);
+        }
+    }
+    public bool REINSTATEDAYSELIGIBILITY_IsNull
+    {
+        get
+        {
+            return IsNull(40);
+        }
+    }
+
+    public BlobColumn MEMO
+    {
+        get
+        {
+            return (BlobColumn)Buffer[BufferColumnIndexes[41]];
+        }
+    }
+    public bool MEMO_IsNull
+    {
+        get
+        {
+            return IsNull(41);
+        }
+    }
+
+    public String InsurerCode
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[42]);
+        }
+    }
+    public bool InsurerCode_IsNull
+    {
+        get
+        {
+            return IsNull(42);
+        }
+    }
+
+    public String DealerCostPayeeCode
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[43]);
+        }
+    }
+    public bool DealerCostPayeeCode_IsNull
+    {
+        get
+        {
+            return IsNull(43);
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+
+public class Output0Buffer: ScriptBuffer
+
+{
+    public Output0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String Type
+    {
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool Type_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String State
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool State_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String Country
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool Country_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String Street
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool Street_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String City
+    {
+        set
+        {
+            this[4] = value;
+        }
+    }
+    public bool City_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(4);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String Code
+    {
+        set
+        {
+            this[5] = value;
+        }
+    }
+    public bool Code_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(5);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String Name
+    {
+        set
+        {
+            this[6] = value;
+        }
+    }
+    public bool Name_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(6);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String Zip
+    {
+        set
+        {
+            this[7] = value;
+        }
+    }
+    public bool Zip_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(7);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String StateCode
+    {
+        set
+        {
+            this[8] = value;
+        }
+    }
+    public bool StateCode_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(8);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public void AddRow()
+    {
+        base.AddRow();
+    }
+
+    new public void SetEndOfRowset()
+    {
+        base.SetEndOfRowset();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_eea236b8349b45de985762d5dbe3a7d2.Properties.Settings.get_Default():SC_eea236b8349b45de985762d5dbe3a7d2.Properties.Sett" +
+    "ings")]
+
+namespace SC_eea236b8349b45de985762d5dbe3a7d2.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_eea236b8349b45de985762d5dbe3a7d2.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22ca048f-37fd-4953-aa6c-975c7bbb43a4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_eea236b8349b45de985762d5dbe3a7d2</RootNamespace>
+    <AssemblyName>SC_eea236b8349b45de985762d5dbe3a7d2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_eea236b8349b45de985762d5dbe3a7d2" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>SC_eea236b8349b45de985762d5dbe3a7d2</msb:CodeName>
+		<msb:DisplayName>SC_eea236b8349b45de985762d5dbe3a7d2</msb:DisplayName>
+		<msb:ProjectId>{B0CC88F0-82B3-45E4-B6CE-E546A5F30E1A}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_eea236b8349b45de985762d5dbe3a7d2.csproj"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_eea236b8349b45de985762d5dbe3a7d2")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_eea236b8349b45de985762d5dbe3a7d2")]
+[assembly: AssemblyCopyright("Copyright @  2017")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_eea236b8349b45de985762d5dbe3a7d2.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_eea236b8349b45de985762d5dbe3a7d2.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_eea236b8349b45de985762d5dbe3a7d2.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_eea236b8349b45de985762d5dbe3a7d2.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_eea236b8349b45de985762d5dbe3a7d2.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_eea236b8349b45de985762d5dbe3a7d2.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAAo/glkAAAAAAAAAAOAAIiALATAAADAAAAAIAAAAAAAAMk4A
+AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACgAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAOBNAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAOC4AAAAgAAAAMAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAYAAAAAYAAAAyAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAIAAAAACAAAAOAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAU
+TgAAAAAAAEgAAAACAAUA5CkAAEQjAAABAAAAAAAAAChNAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAQANwEAAAEAABECewMAAARv
+dAAABgJ7AwAABANvCQAABnIBAABwA28HAAAGKBIAAApvbAAABgJ7AwAABANvEwAABm9qAAAGAnsD
+AAAEcgUAAHBvZgAABgJ7AwAABANvCwAABm9uAAAGA28WAAAGLTIDbxUAAAZvEwAAChgzEwJ7AwAA
+BANvFQAABm9yAAAGKxECewMAAAQDbxUAAAZvZAAABnILAABwCnILAABwCwNvEAAABi0lA28PAAAG
+cg0AAHByCwAAcG8UAAAKchEAAHByCwAAcG8UAAAKCgNvEgAABi0lA28RAAAGcg0AAHByCwAAcG8U
+AAAKchEAAHByCwAAcG8UAAAKCwJ7AwAABAZyFQAAcAcoEgAACm9oAAAGAnsDAAAEchkAAHBvYgAA
+BgJ7AwAABANvFwAABm9wAAAGKgYqHgIodwAABioqAgMEBSgVAAAKKlICexYAAAoCexcAAAoWlG8Y
+AAAKKiICFigZAAAKKlICexYAAAoCexcAAAoXlG8YAAAKKiICFygZAAAKKlICexYAAAoCexcAAAoY
+lG8YAAAKKiICGCgZAAAKKlICexYAAAoCexcAAAoZlG8YAAAKKiICGSgZAAAKKlICexYAAAoCexcA
+AAoalG8YAAAKKiICGigZAAAKKlICexYAAAoCexcAAAoblG8YAAAKKiICGygZAAAKKlICexYAAAoC
+excAAAoclG8YAAAKKiICHCgZAAAKKlICexYAAAoCexcAAAodlG8YAAAKKiICHSgZAAAKKlICexYA
+AAoCexcAAAoelG8YAAAKKiICHigZAAAKKlYCexYAAAoCexcAAAofCZRvGAAACiomAh8JKBkAAAoq
+VgJ7FgAACgJ7FwAACh8KlG8YAAAKKiYCHwooGQAACipWAnsWAAAKAnsXAAAKHwuUbxgAAAoqJgIf
+CygZAAAKKlYCexYAAAoCexcAAAofDJRvGAAACiomAh8MKBkAAAoqVgJ7FgAACgJ7FwAACh8NlG8Y
+AAAKKiYCHw0oGQAACipWAnsWAAAKAnsXAAAKHw6UbxgAAAoqJgIfDigZAAAKKlYCexYAAAoCexcA
+AAofD5RvGAAACiomAh8PKBkAAAoqVgJ7FgAACgJ7FwAACh8QlG8YAAAKKiYCHxAoGQAACipWAnsW
+AAAKAnsXAAAKHxGUbxgAAAoqJgIfESgZAAAKKlYCexYAAAoCexcAAAofEpRvGAAACiomAh8SKBkA
+AAoqVgJ7FgAACgJ7FwAACh8TlG8YAAAKKiYCHxMoGQAACipWAnsWAAAKAnsXAAAKHxSUbxgAAAoq
+JgIfFCgZAAAKKlYCexYAAAoCexcAAAofFZRvGAAACiomAh8VKBkAAAoqVgJ7FgAACgJ7FwAACh8W
+lG8YAAAKKiYCHxYoGQAACipWAnsWAAAKAnsXAAAKHxeUbxoAAAoqJgIfFygZAAAKKlYCexYAAAoC
+excAAAofGJRvGAAACiomAh8YKBkAAAoqVgJ7FgAACgJ7FwAACh8ZlG8YAAAKKiYCHxkoGQAACipW
+AnsWAAAKAnsXAAAKHxqUbxgAAAoqJgIfGigZAAAKKlYCexYAAAoCexcAAAofG5RvGAAACiomAh8b
+KBkAAAoqVgJ7FgAACgJ7FwAACh8clG8YAAAKKiYCHxwoGQAACipWAnsWAAAKAnsXAAAKHx2UbxsA
+AAoqJgIfHSgZAAAKKlYCexYAAAoCexcAAAofHpRvGwAACiomAh8eKBkAAAoqVgJ7FgAACgJ7FwAA
+Ch8flG8YAAAKKiYCHx8oGQAACipWAnsWAAAKAnsXAAAKHyCUbxoAAAoqJgIfICgZAAAKKlYCexYA
+AAoCexcAAAofIZRvGAAACiomAh8hKBkAAAoqVgJ7FgAACgJ7FwAACh8ilG8YAAAKKiYCHyIoGQAA
+CipWAnsWAAAKAnsXAAAKHyOUbxgAAAoqJgIfIygZAAAKKlYCexYAAAoCexcAAAofJJRvGAAACiom
+Ah8kKBkAAAoqVgJ7FgAACgJ7FwAACh8llG8YAAAKKiYCHyUoGQAACipWAnsWAAAKAnsXAAAKHyaU
+bxgAAAoqJgIfJigZAAAKKlYCexYAAAoCexcAAAofJ5RvGAAACiomAh8nKBkAAAoqVgJ7FgAACgJ7
+FwAACh8olG8bAAAKKiYCHygoGQAACipqAnsWAAAKAnsXAAAKHymUbxwAAAp0EgAAASomAh8pKBkA
+AAoqVgJ7FgAACgJ7FwAACh8qlG8YAAAKKiYCHyooGQAACipWAnsWAAAKAnsXAAAKHyuUbxgAAAoq
+JgIfKygZAAAKKh4CKB0AAAoqHgIoHgAACiomAhYDKB8AAAoqWgMsCAIWKCAAAAoqcj8AAHBzIQAA
+CnomAhcDKB8AAAoqWgMsCAIXKCAAAAoqcj8AAHBzIQAACnomAhgDKB8AAAoqWgMsCAIYKCAAAAoq
+cj8AAHBzIQAACnomAhkDKB8AAAoqWgMsCAIZKCAAAAoqcj8AAHBzIQAACnomAhoDKB8AAAoqWgMs
+CAIaKCAAAAoqcj8AAHBzIQAACnomAhsDKB8AAAoqWgMsCAIbKCAAAAoqcj8AAHBzIQAACnomAhwD
+KB8AAAoqWgMsCAIcKCAAAAoqcj8AAHBzIQAACnomAh0DKB8AAAoqWgMsCAIdKCAAAAoqcj8AAHBz
+IQAACnomAh4DKB8AAAoqWgMsCAIeKCAAAAoqcj8AAHBzIQAACnoeAigiAAAKKh4CKCMAAAoqfgIo
+JAAACgICc38AAAZ9AQAABAICc4AAAAZ9AgAABCoTMAQATwAAAAAAAAAEctwAAHAabyUAAAosFQIF
+AgMoJgAACg4EcwYAAAZvfQAABgVvJwAACiwjAgJ7BAAABBdYfQQAAAQCewQAAAQXMwwCb3kAAAYC
+KHoAAAYqbgJ7AwAABCwSAnsDAAAEb3UAAAYCFH0DAAAEKgATMAUAPQAAAAIAABEWCisuBAaUDgRy
+7AAAcCgoAAAKMxkCBQaaAgQGlCgmAAAKDgRzYQAABn0DAAAEBhdYCgYDMs4Cb3wAAAYqSisHAgNv
+fgAABgNvXwAABi3xKjoCKCkAAAoCA30FAAAEKjoCKCkAAAoCA30GAAAEKh4CKCkAAAoqrn4HAAAE
+LR5y/gAAcNAIAAACKCoAAApvKwAACnMsAAAKgAcAAAR+BwAABCoafggAAAQqHgKACAAABCoafgkA
+AAQqHgIoLQAACiouc4YAAAaACQAABCpCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwA
+AAA4EQAAI34AAKQRAAAgDgAAI1N0cmluZ3MAAAAAxB8AAHABAAAjVVMANCEAABAAAAAjR1VJRAAA
+AEQhAAAAAgAAI0Jsb2IAAAAAAAAAAgAAAVcVogEJAQAAAPoBMwAWAAABAAAAIQAAAAkAAAAJAAAA
+hwAAACYAAAAtAAAAEAAAAAIAAAAEAAAAbQAAAG4AAAABAAAABAAAAAEAAAAAAAgGAQAAAAAABgD0
+BN8LBgCIBd8LBgBABMwLDwBTDAAABgBtBAELBgDXBAELBgC4BAELBgBvBQELBgAUBQELBgAtBQEL
+BgCEBAELBgCfBMMFCgBIBX8DCgCUC38DDgCFC38DCgBKC38DBgB2A64KDgDMCn8DCgBoDX8DBgAN
+Da4KBgAjBMwLBgClC/8LBgA+C+wKEgDzA/IFEgBUBPIFEgDRA9cKBgAIBN8LBgDgBa4KBgATC64K
+BgAtC64KBgCkA64KBgA8A64KBgAADgELAAAAAHgAAAAAAAEAAQABABAAwQoAABQAAQABAAEAEABq
+CwAAOQABAAYAAQAQAHcLAAA5AAEAYQABABAASg0AAE0AAQB3AAEAEADQDAAAUQAFAH8AAQAQAJEM
+AABRAAYAgAAAABAABgxiDFEABwCBAAABEADADGIMaQAJAIUABgDQDKcABgCRDKsABgB3C68AAQDC
+ArMAAQBYDbYAAQBYDbYAEQC1CroAEQDBA74AEQDtAsIAUCAAAAAAxgCmBQYAAQBYIAAAAADGALEF
+BgABAGAgAAAAAMYA3Q3GAAEAoyEAAAAAxgDyDAYAAgClIQAAAACGGLULBgACAK0hAAAAAIYYtQsx
+AAIAuCEAAAAAhggoAswABQDNIQAAAACGCO0IXQAFANYhAAAAAIYIDAHMAAUA6yEAAAAAhghMB10A
+BQD0IQAAAACGCAEAzAAFAAkiAAAAAIYIMAZdAAUAEiIAAAAAhggyAMwABQAnIgAAAACGCG0GXQAF
+ADAiAAAAAIYICwDMAAUARSIAAAAAhghBBl0ABQBOIgAAAACGCEcAzAAFAGMiAAAAAIYIkAZdAAUA
+bCIAAAAAhgiTAswABQCBIgAAAACGCJAJXQAFAIoiAAAAAIYIcgHMAAUAnyIAAAAAhgjjB10ABQCo
+IgAAAACGCP0BzAAFAL0iAAAAAIYIrQhdAAUAxiIAAAAAhgg3AcwABQDcIgAAAACGCIwHXQAFAOYi
+AAAAAIYIPADMAAUA/CIAAAAAhgh+Bl0ABQAGIwAAAACGCG8CzAAFABwjAAAAAIYIVwldAAUAJiMA
+AAAAhgikAcwABQA8IwAAAACGCCoIXQAFAEYjAAAAAIYIfAHMAAUAXCMAAAAAhgj0B10ABQBmIwAA
+AACGCHcCzAAFAHwjAAAAAIYIZgldAAUAhiMAAAAAhgjwAcwABQCcIwAAAACGCJkIXQAFAKYjAAAA
+AIYIvwHMAAUAvCMAAAAAhghTCF0ABQDGIwAAAACGCF8CzAAFANwjAAAAAIYIQAldAAUA5iMAAAAA
+hggFAswABQD8IwAAAACGCLwIXQAFAAYkAAAAAIYIFgLMAAUAHCQAAAAAhgjUCF0ABQAmJAAAAACG
+CI4BzAAFADwkAAAAAIYIDQhdAAUARiQAAAAAhghCAswABQBcJAAAAACGCBUJXQAFAGYkAAAAAIYI
+/gDMAAUAfCQAAAAAhgg3B10ABQCGJAAAAACGCIMC0AAFAJwkAAAAAIYIeQldAAUApiQAAAAAhgjr
+AMwABQC8JAAAAACGCB0HXQAFAMYkAAAAAIYI0QHMAAUA3CQAAAAAhghsCF0ABQDmJAAAAACGCEEB
+zAAFAPwkAAAAAIYInQddAAUABiUAAAAAhggVAcwABQAcJQAAAACGCFwHXQAFACYlAAAAAIYI1ADM
+AAUAPCUAAAAAhgj/Bl0ABQBGJQAAAACGCE0CJwAFAFwlAAAAAIYIJwldAAUAZiUAAAAAhgijACcA
+BQB8JQAAAACGCNQGXQAFAIYlAAAAAIYIKgHMAAUAnCUAAAAAhgh4B10ABQCmJQAAAACGCJMA0AAF
+ALwlAAAAAIYIvQZdAAUAxiUAAAAAhgjEAMwABQDcJQAAAACGCOgGXQAFAOYlAAAAAIYIIQDMAAUA
+/CUAAAAAhghVBl0ABQAGJgAAAACGCLUBzAAFABwmAAAAAIYIQghdAAUAJiYAAAAAhgg1AswABQA8
+JgAAAACGCAEJXQAFAEYmAAAAAIYIWAHMAAUAXCYAAAAAhgi7B10ABQBmJgAAAACGCGUBzAAFAHwm
+AAAAAIYIzwddAAUAhiYAAAAAhgiBAMwABQCcJgAAAACGCKQGXQAFAKYmAAAAAIYInAInAAUAvCYA
+AAAAhgigCV0ABQDGJgAAAACGCOcB1QAFAOEmAAAAAIYIiQhdAAUA6yYAAAAAhggsA8wABQABJwAA
+AACGCAgKXQAFAAsnAAAAAIYIBgPMAAUAIScAAAAAhgjUCV0ABQArJwAAAACGAPQNXQAFADMnAAAA
+AIYAMg1dAAUArSEAAAAAhhi1CzEABQA7JwAAAACGCKADEAAIAEUnAAAAAIYILwraAAkAXCcAAAAA
+hgjpAxAACgBmJwAAAACGCD8K2gALAH0nAAAAAIYICQ4QAAwAhycAAAAAhghxCtoADQCeJwAAAACG
+CBQNEAAOAKgnAAAAAIYIXwraAA8AvycAAAAAhggVDhAAEADJJwAAAACGCIQK2gARAOAnAAAAAIYI
+/QIQABIA6icAAAAAhgjECdoAEwABKAAAAACGCGADEAAUAAsoAAAAAIYIHwraABUAIigAAAAAhghi
+CxAAFgAsKAAAAACGCFAK2gAXAEMoAAAAAIYIHgMQABgATSgAAAAAhgjzCdoAGQBkKAAAAACGANYN
+BgAaAGwoAAAAAIYALw0GABoAMycAAAAAhgAyDV0AGgB0KAAAAACGGLULBgAaAJQoAAAAAMYAvQ3f
+ABoAoyEAAAAAxgHkDAYAHgDvKAAAAACBANECBgAeAAwpAAAAAMYAyg3pAB4AoyEAAAAAxgHyDAYA
+IgBVKQAAAADGAbYNxgAiAKMhAAAAAMYB3Q3GACMAaCkAAAAAhhi1C/UAJAB3KQAAAACGGLUL9QAl
+AIYpAAAAAIMYtQsGACYAjikAAAAAkwihC/sAJgC6KQAAAACTCKkDAAEmAMEpAAAAAJMItQMFASYA
+ySkAAAAAlgg+DQsBJwDQKQAAAACGGLULBgAnANgpAAAAAJEYuwsQAScAAAABAPgNAAABAJoLAAAC
+AJsMAAADAFgLAAABAJoLAAACAJsMAAADAFgLAAABAL0FAAABAL0FAAABAL0FAAABAL0FAAABAL0F
+AAABAL0FAAABAL0FAAABAL0FAAABAL0FAAABAL0FAAABAL0FAAABAL0FAAABAL0FAAABAL0FAAAB
+AL0FAAABAL0FAAABAL0FAAABAL0FAAABALAAAAACAGkDAAADAJoLAAAEAFgLAAABAOoMAAACAMIL
+AAADANwMAAAEAFgLAAABAJoLAAABAPgNAAABAG4NAAABAG4NAAABAL0FCQC1CwEAEQC1CwYAGQC1
+CwoAKQC1CxAAMQC1CxAAOQC1CxAAQQC1CxAASQC1CxAAUQC1CxAAWQC1CxAAYQC1CxAAaQC1CwYA
+qQC1CwYAyQC1CxUA2QC1CwYAmQCmBQYAmQCxBQYA4QAGDSAA4QDnBScA4QDlAisAcQC1CzEAcQCa
+CzsAcQCbDD8AeQDdBUMAcQCNCkgAeQBzA00AeQAYAFMAeQCcClgAcQD0DV0AcQAyDV0AcQClCmEA
+cQCUCgEA6QC1CxAAcQDWDQYAcQAvDQYAmQC1CwYA4QDJDGcAmQCvDG4AeQAfDV0AmQC4AHgAoQC1
+CwYA+QBOA38A+QD8DYcAsQC1C40A0QC1CwYALgALADkBLgATAEIBLgAbAGEBLgAjAGoBLgArAJMB
+LgAzAJMBLgA7AJMBLgBDAGoBLgBLAJkBLgBTAJMBLgBbALABQwBjAPoBAwFrAPoBIQF7APoBaQ1z
+AGEBiQ1zAGEBGwB0AAMAAQAEAFkACABrAAkAbQAAACwCFAEAAPEIGAEAABABFAEAAFAHGAEAAAUA
+FAEAADQGGAEAADYAFAEAAHEGGAEAAA8AFAEAAEUGGAEAAEsAFAEAAJQGGAEAAJcCFAEAAJQJGAEA
+AHYBFAEAAOcHGAEAAAECFAEAALEIGAEAADsBFAEAAJAHGAEAAEAAFAEAAIIGGAEAAHMCFAEAAFsJ
+GAEAAKgBFAEAAC4IGAEAAIABFAEAAPgHGAEAAHsCFAEAAGoJGAEAAPQBFAEAAJ0IGAEAAMMBFAEA
+AFcIGAEAAGMCFAEAAEQJGAEAAAkCFAEAAMAIGAEAABoCFAEAANgIGAEAAJIBFAEAABEIGAEAAEYC
+FAEAABkJGAEAAAIBFAEAADsHGAEAAIcCHAEAAH0JGAEAAO8AFAEAACEHGAEAANUBFAEAAHAIGAEA
+AEUBFAEAAKEHGAEAABkBFAEAAGAHGAEAANgAFAEAAAMHGAEAAFECIQEAACsJGAEAAKcAIQEAANgG
+GAEAAC4BFAEAAHwHGAEAAJcAHAEAAMEGGAEAAMgAFAEAAOwGGAEAACUAFAEAAFkGGAEAALkBFAEA
+AEYIGAEAADkCFAEAAAUJGAEAAFwBFAEAAL8HGAEAAGkBFAEAANMHGAEAAIUAFAEAAKgGGAEAAKAC
+IQEAAKQJGAEAAOsBJQEAAI0IGAEAADADFAEAAAwKGAEAAAoDFAEAANgJGAEAAKQDFAEAADMKGAEA
+AAIEFAEAAEMKGAEAAA0OFAEAAHUKGAEAABgNFAEAAGMKGAEAABkOFAEAAIgKGAEAADcDFAEAABMK
+GAEAAG4DFAEAACMKGAEAAGYLFAEAAFQKGAEAACIDFAEAAPcJGAEAAKULKgEAAMkDLwEAAEINNAEC
+AAcAAwACAAgABQACAAkABwACAAoACQACAAsACwACAAwADQACAA0ADwACAA4AEQACAA8AEwACABAA
+FQACABEAFwACABIAGQACABMAGwACABQAHQACABUAHwACABYAIQACABcAIwACABgAJQACABkAJwAC
+ABoAKQACABsAKwACABwALQACAB0ALwACAB4AMQACAB8AMwACACAANQACACEANwACACIAOQACACMA
+OwACACQAPQACACUAPwACACYAQQACACcAQwACACgARQACACkARwACACoASQACACsASwACACwATQAC
+AC0ATwACAC4AUQACAC8AUwACADAAVQACADEAVwACADIAWQACADMAWwACADQAXQACADUAXwACADYA
+YQACADcAYwACADgAZQACADkAZwACADoAaQACADsAawACADwAbQACAD0AbwACAD4AcQACAD8AcwAC
+AEAAdQACAEEAdwACAEIAeQACAEMAewACAEQAfQACAEUAfwACAEYAgQACAEcAgwACAEgAhQACAEkA
+hwACAEoAiQACAEsAiwACAEwAjQACAE0AjwACAE4AkQACAE8AkwACAFAAlQACAFEAlwACAFIAmQAC
+AFMAmwACAFQAnQACAFUAnwACAFYAoQACAFcAowACAFgApQACAFkApwACAFoAqQACAFsAqwACAFwA
+rQACAF0ArwACAF4AsQABAGIAswABAGMAtQABAGQAtwABAGUAuQABAGYAuwABAGcAvQABAGgAvwAB
+AGkAwQABAGoAwwABAGsAxQABAGwAxwABAG0AyQABAG4AywABAG8AzQABAHAAzwABAHEA0QABAHIA
+0wABAHMA1QACAIIA1wACAIMA2QABAIQA2QACAIUA2wAEgAAAAQAAAAAAAAAAAAAAAABUAAAABAAA
+AAAAAAAAAAAAlQC5AgAAAAANAAAAAAAAAAAAAACeAHgNAAAAAA0AAAAAAAAAAAAAAJ4AlQ0AAAAA
+BAAAAAAAAAAAAAAAlQCuCgAAAAAAAAAAAQAAABAMAAAAAAAAAGdldF9OQU1FMQBnZXRfQUREUkVT
+UzEAR2V0SW50MzIAZ2V0X1BIT05FU09VUkNFMgBnZXRfTkFNRTIAZ2V0X1BIT05FMgBnZXRfQURE
+UkVTUzIAU0NfZWVhMjM2YjgzNDliNDVkZTk4NTc2MmQ1ZGJlM2E3ZDIAPE1vZHVsZT4AZ2V0X0NB
+TkNFTEZPUk1VTEEAZ2V0X0RBVEVVUERBVEVEAGdldF9FTlRJVFlJRABJbnB1dElEAEdldE91dHB1
+dElEAGdldF9QSE9ORVNPVVJDRQBnZXRfUkVJTlNUQVRFUEFZRUVDT0RFAGdldF9BQ0hST1VUSU5H
+Q09ERQBnZXRfR1JPVVBDT0RFAGdldF9DT0RFAGdldF9DT01QQU5ZQ0FOQ0VMRkVFAGdldF9VU0VS
+TkFNRQBnZXRfUEhPTkUAZ2V0X0FDSEJBTktBQ0NPVU5UVFlQRQBnZXRfSEFSRFdBUkUAZ2V0X1NP
+RlRXQVJFAGdldF9TVEFURQBnZXRfRklOQU5DSUFMU0laRQBnZXRfTElNSVRGT1JGSU5BTkNJTkcA
+Z2V0X0FNQkVTVFJBVElORwBnZXRfRU1BSUwAZ2V0X05GUE5FR0NPTkZJUk0AZ2V0X0FDSEJBTktB
+Q0NPVU5UTlVNAGdldF9NRU1PAGdldF9QUklOVE5GUABnZXRfWklQAGdldF9QUklOVE5PVElDRVMA
+Z2V0X0NPTUJJTkVDSEVDS1MAZ2V0X0JVU0lORVNTAGdldF9DT05UQUNUUwBnZXRfU1RBVFVTAGdl
+dF9SRUlOU1RBVEVEQVlTAGdldF9QUklOVElOVEVOVABnZXRfRkFYAGdldF9GUElOREVYAGdldF9E
+QVRFT0ZFTlRSWQBnZXRfQ0lUWQBnZXRfUkVJTlNUQVRFREFZU0VMSUdJQklMSVRZAG1zY29ybGli
+AElucHV0c0ZpbmlzaGVkAE1hcmtPdXRwdXRzRmluaXNoZWQAUmVwbGFjZQBkZWZhdWx0SW5zdGFu
+Y2UAc2V0X0NvZGUAZ2V0X0RlYWxlckNvc3RQYXllZUNvZGUAc2V0X1N0YXRlQ29kZQBnZXRfSW5z
+dXJlckNvZGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUAc2V0X05hbWUASW5w
+dXROYW1lAEdldERhdGVUaW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAHNldF9U
+eXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBBcHBsaWNhdGlvblNl
+dHRpbmdzQmFzZQBzZXRfU3RhdGUARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0
+ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmli
+dXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2Vt
+Ymx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNv
+bmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxh
+dGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJs
+eUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0
+ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUA
+UHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAEdl
+dFN0cmluZwBnZXRfTGVuZ3RoAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ19lZWEyMzZiODM0OWI0
+NWRlOTg1NzYyZDVkYmUzYTdkMi5kbGwAZ2V0X05BTUUxX0lzTnVsbABnZXRfQUREUkVTUzFfSXNO
+dWxsAGdldF9QSE9ORVNPVVJDRTJfSXNOdWxsAGdldF9OQU1FMl9Jc051bGwAZ2V0X1BIT05FMl9J
+c051bGwAZ2V0X0FERFJFU1MyX0lzTnVsbABnZXRfQ0FOQ0VMRk9STVVMQV9Jc051bGwAZ2V0X0RB
+VEVVUERBVEVEX0lzTnVsbABnZXRfRU5USVRZSURfSXNOdWxsAGdldF9QSE9ORVNPVVJDRV9Jc051
+bGwAZ2V0X1JFSU5TVEFURVBBWUVFQ09ERV9Jc051bGwAZ2V0X0FDSFJPVVRJTkdDT0RFX0lzTnVs
+bABnZXRfR1JPVVBDT0RFX0lzTnVsbABnZXRfQ09ERV9Jc051bGwAZ2V0X0NPTVBBTllDQU5DRUxG
+RUVfSXNOdWxsAGdldF9VU0VSTkFNRV9Jc051bGwAZ2V0X1BIT05FX0lzTnVsbABnZXRfQUNIQkFO
+S0FDQ09VTlRUWVBFX0lzTnVsbABnZXRfSEFSRFdBUkVfSXNOdWxsAGdldF9TT0ZUV0FSRV9Jc051
+bGwAZ2V0X1NUQVRFX0lzTnVsbABnZXRfRklOQU5DSUFMU0laRV9Jc051bGwAZ2V0X0xJTUlURk9S
+RklOQU5DSU5HX0lzTnVsbABnZXRfQU1CRVNUUkFUSU5HX0lzTnVsbABnZXRfRU1BSUxfSXNOdWxs
+AGdldF9ORlBORUdDT05GSVJNX0lzTnVsbABnZXRfQUNIQkFOS0FDQ09VTlROVU1fSXNOdWxsAGdl
+dF9NRU1PX0lzTnVsbABnZXRfUFJJTlRORlBfSXNOdWxsAGdldF9aSVBfSXNOdWxsAGdldF9QUklO
+VE5PVElDRVNfSXNOdWxsAGdldF9DT01CSU5FQ0hFQ0tTX0lzTnVsbABnZXRfQlVTSU5FU1NfSXNO
+dWxsAGdldF9DT05UQUNUU19Jc051bGwAZ2V0X1NUQVRVU19Jc051bGwAZ2V0X1JFSU5TVEFURURB
+WVNfSXNOdWxsAGdldF9QUklOVElOVEVOVF9Jc051bGwAZ2V0X0ZBWF9Jc051bGwAZ2V0X0ZQSU5E
+RVhfSXNOdWxsAGdldF9EQVRFT0ZFTlRSWV9Jc051bGwAZ2V0X0NJVFlfSXNOdWxsAGdldF9SRUlO
+U1RBVEVEQVlTRUxJR0lCSUxJVFlfSXNOdWxsAHNldF9Db2RlX0lzTnVsbABnZXRfRGVhbGVyQ29z
+dFBheWVlQ29kZV9Jc051bGwAc2V0X1N0YXRlQ29kZV9Jc051bGwAZ2V0X0luc3VyZXJDb2RlX0lz
+TnVsbABzZXRfTmFtZV9Jc051bGwAc2V0X1R5cGVfSXNOdWxsAHNldF9TdGF0ZV9Jc051bGwAc2V0
+X1ppcF9Jc051bGwAc2V0X1N0cmVldF9Jc051bGwAc2V0X0NvdW50cnlfSXNOdWxsAHNldF9DaXR5
+X0lzTnVsbABTZXROdWxsAGdldF9JdGVtAHNldF9JdGVtAFN5c3RlbQByZXNvdXJjZU1hbgBTY3Jp
+cHRNYWluAEJsb2JDb2x1bW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRp
+b24AU3lzdGVtLlJlZmxlY3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJpbmdDb21w
+YXJpc29uAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAHNldF9aaXAASW5wdXQw
+QnVmZmVyAE91dHB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNv
+dXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAE91dHB1dElEcwBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lz
+dGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDX2VlYTIzNmI4
+MzQ5YjQ1ZGU5ODU3NjJkNWRiZTNhN2QyLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBE
+ZWJ1Z2dpbmdNb2RlcwBTQ19lZWEyMzZiODM0OWI0NWRlOTg1NzYyZDVkYmUzYTdkMi5Qcm9wZXJ0
+aWVzAFZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGlu
+Z3MARXF1YWxzAENvbm5lY3Rpb25zAEJ1ZmZlcnMARmluaXNoT3V0cHV0cwBDcmVhdGVOZXdPdXRw
+dXRSb3dzAENvbmNhdABPYmplY3QAc2V0X1N0cmVldABnZXRfRW5kT2ZSb3dzZXQAU2V0RW5kT2ZS
+b3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29t
+cG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5Q
+aXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABQcmltZU91dHB1dABBZGRSb3cASW5wdXQw
+X1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93AGdldF9Bc3NlbWJseQBzZXRfQ291bnRyeQBzZXRfQ2l0
+eQAAAAADLQABBVUAUwAAAQADLAAAAyIAAAMgAAAlQwBhAGwAbAAgAEMAZQBuAHQAZQByAC8AUwBl
+AGwAbABlAHIAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAg
+AGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEA
+bAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAAAPSQBu
+AHAAdQB0ACAAMAAAEU8AdQB0AHAAdQB0ACAAMAAAcVMAQwBfAGUAZQBhADIAMwA2AGIAOAAzADQA
+OQBiADQANQBkAGUAOQA4ADUANwA2ADIAZAA1AGQAYgBlADMAYQA3AGQAMgAuAFAAcgBvAHAAZQBy
+AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAZ3NKRW7I90CplOlo2yBzugAEIAEBCAMgAAEF
+IAEBEREEIAEBDgUgAQERYQQHAg4OBgADDg4ODgMgAAgFIAIODg4JIAMBEj0dCBJBAwYSPQMGHQgE
+IAEOCAQgAQIIBSABEUUIBCABCAgEIAEcCAMgAAIFIAIBCBwGIAICDhF5BSABHQgIAwcBCAYAAggS
+QQ4HAAESfRGAgQUgABKAhQcgAgEOEoCFCLd6XFYZNOCJCImEXc2AgMyRAwYSGAMGEhwDBhIQAgYI
+AwYSTQMGElkDBhJdAwYSJAUgAQESDAMgAA4EIAARRQQgABJJBCABAQIJIAQBCA4SPRJBCyAEAQgd
+CB0SPRJBBSABARJNBAAAElkEAAASXQUAAQESXQQAABIkAwAAAQMoAA4DKAACBCgAEUUDKAAIBCgA
+EkkECAASWQQIABJdBAgAEiQIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MB
+CAEAAgAAAAAAKAEAI1NDX2VlYTIzNmI4MzQ5YjQ1ZGU5ODU3NjJkNWRiZTNhN2QyAAAFAQAAAAAW
+AQARQ29weXJpZ2h0IEAgIDIwMTcAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNQEAVA4U
+RnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41BAEAAAAAtAAAAM7K774BAAAA
+kQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00
+LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkj
+U3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAA
+AAhOAAAAAAAAAAAAACJOAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUTgAAAAAAAAAAAAAAAF9D
+b3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAAABgAAIAA
+AAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABYYAAA7AMAAAAA
+AAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E7/4AAAEAAAAB
+AAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBWAGEAcgBGAGkA
+bABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAAAAAAAACwBEwDAAAB
+AFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAAMAA0AGIAMAAAABoA
+AQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5AE4AYQBtAGUAAAAA
+AAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBDAF8AZQBlAGEA
+MgAzADYAYgA4ADMANAA5AGIANAA1AGQAZQA5ADgANQA3ADYAMgBkADUAZABiAGUAMwBhADcAZAAy
+AAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAALgAwAAAAcAAoAAEA
+SQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwBlAGUAYQAyADMANgBiADgAMwA0ADkAYgA0
+ADUAZABlADkAOAA1ADcANgAyAGQANQBkAGIAZQAzAGEANwBkADIALgBkAGwAbAAAAEgAEgABAEwA
+ZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAw
+ADEANwAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEA
+TwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfAGUAZQBhADIAMwA2AGIAOAAz
+ADQAOQBiADQANQBkAGUAOQA4ADUANwA2ADIAZAA1AGQAYgBlADMAYQA3AGQAMgAuAGQAbABsAAAA
+aAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwBlAGUAYQAyADMANgBiADgAMwA0
+ADkAYgA0ADUAZABlADkAOAA1ADcANgAyAGQANQBkAGIAZQAzAGEANwBkADIAAAA0AAgAAQBQAHIA
+bwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAIAAEAQQBzAHMAZQBt
+AGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAADAAAADQ+AAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_eea236b8349b45de985762d5dbe3a7d2</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum"
+                  typeConverter="NOTBROWSABLE">6e2a63544868b726c203528d664a0245</property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataShaChecksum"
+                  typeConverter="NOTBROWSABLE">c25d3e4de6fbba4a328ca9350f06be3386159569</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[BUSINESS]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="BUSINESS"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[BUSINESS]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[CODE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CODE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CODE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[NAME1]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NAME1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[NAME1]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[NAME2]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NAME2"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[NAME2]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[ADDRESS1]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ADDRESS1"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ADDRESS1]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[ADDRESS2]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ADDRESS2"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ADDRESS2]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[CITY]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CITY"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CITY]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[STATE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="STATE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[STATE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[ZIP]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ZIP"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ZIP]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[PHONE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PHONE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[PHONE2]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PHONE2"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE2]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[FAX]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FAX"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[FAX]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[AM_BEST_RATING]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="AM_BEST_RATING"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[AM_BEST_RATING]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[FINANCIAL_SIZE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FINANCIAL_SIZE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[FINANCIAL_SIZE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[FP_INDEX]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FP_INDEX"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[FP_INDEX]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[PRINT_NFP]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="PRINT_NFP"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PRINT_NFP]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[NFP_NEG_CONFIRM]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NFP_NEG_CONFIRM"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[NFP_NEG_CONFIRM]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[PRINT_INTENT]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="PRINT_INTENT"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PRINT_INTENT]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[PRINT_NOTICES]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="PRINT_NOTICES"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PRINT_NOTICES]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[COMBINE_CHECKS]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="COMBINE_CHECKS"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[COMBINE_CHECKS]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[LIMIT_FOR_FINANCING]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="LIMIT_FOR_FINANCING"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[LIMIT_FOR_FINANCING]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[STATUS]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="STATUS"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[STATUS]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[GROUP_CODE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="GROUP_CODE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[GROUP_CODE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[DATE_OF_ENTRY]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DATE_OF_ENTRY"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[DATE_OF_ENTRY]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[ACH_ROUTING_CODE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ACH_ROUTING_CODE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ACH_ROUTING_CODE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[ACH_BANK_ACCOUNT_NUM]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ACH_BANK_ACCOUNT_NUM"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ACH_BANK_ACCOUNT_NUM]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[ACH_BANK_ACCOUNT_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ACH_BANK_ACCOUNT_TYPE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ACH_BANK_ACCOUNT_TYPE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[COMPANY_CANCEL_FEE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="COMPANY_CANCEL_FEE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[COMPANY_CANCEL_FEE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[REINSTATE_PAYEE_CODE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="REINSTATE_PAYEE_CODE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[REINSTATE_PAYEE_CODE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[REINSTATE_DAYS]"
+                      cachedDataType="i4"
+                      cachedName="REINSTATE_DAYS"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[REINSTATE_DAYS]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[ENTITY_ID]"
+                      cachedDataType="i4"
+                      cachedName="ENTITY_ID"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[ENTITY_ID]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[USERNAME]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="USERNAME"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[USERNAME]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[DATE_UPDATED]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DATE_UPDATED"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[DATE_UPDATED]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[PHONE_SOURCE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PHONE_SOURCE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE_SOURCE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[PHONE_SOURCE2]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PHONE_SOURCE2"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[PHONE_SOURCE2]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EMAIL"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[EMAIL]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[CONTACTS]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="CONTACTS"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CONTACTS]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[HARDWARE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="HARDWARE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[HARDWARE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[SOFTWARE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SOFTWARE"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[SOFTWARE]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[CANCEL_FORMULA]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="CANCEL_FORMULA"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[CANCEL_FORMULA]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[REINSTATE_DAYS_ELIGIBILITY]"
+                      cachedDataType="i4"
+                      cachedName="REINSTATE_DAYS_ELIGIBILITY"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[REINSTATE_DAYS_ELIGIBILITY]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[MEMO]"
+                      cachedDataType="nText"
+                      cachedName="MEMO"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[MEMO]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[InsurerCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="InsurerCode"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[InsurerCode]" />
+                    <inputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0].Columns[DealerCostPayeeCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DealerCostPayeeCode"
+                      lineageId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output].Columns[DealerCostPayeeCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0]"
+                  hasSideEffects="true"
+                  name="Output 0">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Type]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Type]"
+                      name="Type" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[State]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Country]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Street]"
+                      codePage="20127"
+                      dataType="str"
+                      length="4000"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Street]"
+                      name="Street" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[City]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Code]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Code]"
+                      name="Code" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Name]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Zip]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[Zip]"
+                      name="Zip" />
+                    <outputColumn
+                      refId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[State Code]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0].Columns[State Code]"
+                      name="State Code" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Create Admin Account CSV.Paths[OLE DB Source Output]"
+              endId="Package\Create Admin Account CSV\Script Component.Inputs[Input 0]"
+              name="OLE DB Source Output"
+              startId="Package\Create Admin Account CSV\Get Admin Account.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Create Admin Account CSV.Paths[Output 0]"
+              endId="Package\Create Admin Account CSV\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Output 0"
+              startId="Package\Create Admin Account CSV\Script Component.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Create Seller Account CSV"
       DTS:CreationName="Microsoft.Pipeline"
@@ -5336,20 +8876,20 @@ namespace SC_825febeee83f4955add6a5c56068b18f.Properties {
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
 		<msb:CodeName>SC_825febeee83f4955add6a5c56068b18f</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
 		<msb:DisplayName>SC_825febeee83f4955add6a5c56068b18f</msb:DisplayName>
 		<msb:ProjectId>{22A6769A-30E9-4530-B964-7EE7AE2AC09E}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="SC_825febeee83f4955add6a5c56068b18f.csproj"/>
-		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\Resources.resx"/>
 		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="BufferWrapper.cs"/>
-		<msb:File Include="main.cs"/>
 		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
 		<msb:File Include="ComponentWrapper.cs"/>
 	</msb:ItemGroup>
 </c:Project>]]></arrayElement>
@@ -5505,7 +9045,7 @@ using System.Runtime.CompilerServices;
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAB8aglkAAAAAAAAAAOAAIiALATAAAEoAAAAIAAAAAAAAZmgA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAM07glkAAAAAAAAAAOAAIiALATAAAEoAAAAIAAAAAAAAZmgA
 AAAgAAAAgAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAADAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAABRoAABPAAAAAIAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAKAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -5822,8 +9362,8 @@ ZQByAHQAeQAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAg
 AEEAcwBzAGkAZwBuACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4A
 IABpAG4AcwB0AGUAYQBkAC4AAA9JAG4AcAB1AHQAIAAwAAARTwB1AHQAcAB1AHQAIAAwAABxUwBD
 AF8AOAAyADUAZgBlAGIAZQBlAGUAOAAzAGYANAA5ADUANQBhAGQAZAA2AGEANQBjADUANgAwADYA
-OABiADEAOABmAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAADbDSwM
-nUFeT4Y+w+W4plQnAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFlBAcCDg4GAAMODg4OAyAACAUg
+OABiADEAOABmAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAA1ivCW
+zOHSSZDaU63ZukBmAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFlBAcCDg4GAAMODg4OAyAACAUg
 Ag4ODgkgAwESPR0IEkEDBhI9AwYdCAQgAQ4IBCABAggFIAERRQgEIAEICAUgARFJCAQgARwIAyAA
 AgUgAgEIHAYgAgIOEX0FIAEdCAgDBwEIBgACCBJBDggAARKAgRGAhQUgABKAiQcgAgEOEoCJCLd6
 XFYZNOCJCImEXc2AgMyRAwYSGAMGEhwDBhIQAgYIAwYSUQMGEl0DBhJhAwYSJAUgAQESDAMgAA4E
@@ -18423,6 +21963,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Upsert Admin Account"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{5ED03C74-9C96-484D-A5C4-58C0A3384EBB}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Upsert Admin Account"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="\\plinkdc1\home\IT\Development\SFLoadFiles\SSIS Data Loader\UpsertAdminAccount.bat" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Upsert Seller Accounts"
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:Description="Execute Process Task"
@@ -18520,6 +22076,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
       DTS:To="Package\Upsert Seller Contacts Email Error" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{E3D6065D-7412-4722-AB1F-786FB50A0E67}"
+      DTS:From="Package\Upsert Seller Contacts Email Error"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Create Admin Account CSV" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{9A92F115-C347-4583-BA90-C730DB8AA863}"
+      DTS:From="Package\Create Admin Account CSV"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Upsert Admin Account" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -18532,7 +22104,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="190,42"
           Id="Package\Update Query Variables"
@@ -18685,6 +22257,58 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Create Admin Account CSV"
+          TopLeft="75,259" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="314,281.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-34,0"
+              Start="0,0"
+              End="-26.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-26.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Upsert Admin Account"
+          TopLeft="79,324" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="174,301">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -19106,5 +22730,77 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\Create Admin Account CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Create Admin Account CSV\Get Admin Account"
+          TopLeft="155,22" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Create Admin Account CSV\Script Component"
+          TopLeft="383,22" />
+        <EdgeLayout
+          Id="Package\Create Admin Account CSV.Paths[OLE DB Source Output]"
+          TopLeft="324,43">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59,0"
+              Start="0,0"
+              End="51.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Create Admin Account CSV\Flat File Destination"
+          TopLeft="606,22" />
+        <EdgeLayout
+          Id="Package\Create Admin Account CSV.Paths[Output 0]"
+          TopLeft="546,43">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60,0"
+              Start="0,0"
+              End="52.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="52.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Create Admin Account CSV\Get Admin Account">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
