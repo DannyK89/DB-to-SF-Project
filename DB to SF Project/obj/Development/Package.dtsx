@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="52"
-  DTS:VersionGUID="{E0E56C72-C51A-452E-83D8-02C373A995ED}">
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{30BE981A-6932-44D1-BBB3-39A3337D3813}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -621,6 +621,77 @@
               DTS:TextQualified="True"
               DTS:ObjectName="ERROR"
               DTS:DTSID="{73E84816-482B-491B-8FC6-DEC73856A20E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Monthly Volume CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2FFED897-4423-47A1-A045-43B162A36541}"
+      DTS:ObjectName="Monthly Volume CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="20127"
+          DTS:ConnectionString="\\plinkdc1\home\IT\Development\SFLoadFiles\SSIS Data Loader\CSV Files\MonthlyVolume.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AccountId"
+              DTS:DTSID="{7F178C9A-8454-4D1D-87B9-2DDD7C240345}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalContracts"
+              DTS:DTSID="{0D771086-FBB8-446E-B111-CBC59322A54C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MVId"
+              DTS:DTSID="{088A342B-22FC-47ED-8468-F5B9C17A472F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AccountNetCode"
+              DTS:DTSID="{1A019106-AF24-4AA6-8DA0-C6652315CCAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BookedMonth"
+              DTS:DTSID="{A15F9AC5-EE00-43DD-AB4B-0AEA4444FEBD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Booked Year"
+              DTS:DTSID="{3189FA6C-6FC3-4016-956D-F6556B288863}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -28747,6 +28818,1636 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Created Monthly Volume CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F6056297-A47C-444E-8952-95C6AAA500DD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Created Monthly Volume CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Created Monthly Volume CSV\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Created Monthly Volume CSV\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Monthly Volume CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[Monthly Volume CSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[AccountId]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="AccountId"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AccountId]"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[AccountId]" />
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[TotalContracts]"
+                      cachedDataType="i4"
+                      cachedName="TotalContracts"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TotalContracts]"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[TotalContracts]" />
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[MVId]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="MVId"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MVId]"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[MVId]" />
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[AccountNetCode]"
+                      cachedCodepage="20127"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="AccountNetCode"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AccountNetCode]"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[AccountNetCode]" />
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].Columns[BookedMonth]"
+                      cachedDataType="i4"
+                      cachedName="BookedMonth"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BookedMonth]"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[BookedMonth]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BookedMonth]"
+                      dataType="i4"
+                      name="BookedMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AccountNetCode]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="AccountNetCode" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[MVId]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="MVId" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TotalContracts]"
+                      dataType="i4"
+                      name="TotalContracts" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AccountId]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      name="AccountId" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Booked Year]"
+                      dataType="i4"
+                      name="Booked Year" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Get Monthly Volume Data"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select Business,agent_code,agent_name,BookedYear,BookedMonth,sum(TotalContracts) as TotalBooked
+from(
+SELECT
+VIT.BUSINESS,
+VIT.AGENT_CODE, 
+VIT.AGENT_NAME, 
+year(vit.create_date) as BookedYear,
+month(vit.create_date) as BookedMonth,
+count(*) as TotalContracts
+
+
+ 
+FROM            A_ASCII_VIT VIT with(noexpand) 
+ 
+where
+vit.create_date between DATEADD(m, DATEDIFF(m, 0, dateadd(m,-6,getdate())), 0)  and getdate() 
+ 
+group by
+VIT.BUSINESS,
+VIT.AGENT_CODE, 
+VIT.AGENT_NAME,
+vit.create_date) as x
+
+group by 
+Business,agent_code,agent_name,BookedYear,BookedMonth</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PLINKDB1.WF_AccountNet]"
+                  connectionManagerRefId="Package.ConnectionManagers[PLINKDB1.WF_AccountNet]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[Business]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[Business]"
+                      length="3"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[Business]"
+                      name="Business"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[agent_code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[agent_code]"
+                      length="50"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[agent_code]"
+                      name="agent_code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[agent_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[agent_name]"
+                      length="100"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[agent_name]"
+                      name="agent_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[BookedYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[BookedYear]"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[BookedYear]"
+                      name="BookedYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[BookedMonth]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[BookedMonth]"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[BookedMonth]"
+                      name="BookedMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[TotalBooked]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[TotalBooked]"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[TotalBooked]"
+                      name="TotalBooked"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[Business]"
+                      dataType="wstr"
+                      length="3"
+                      name="Business" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[agent_code]"
+                      dataType="wstr"
+                      length="50"
+                      name="agent_code" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[agent_name]"
+                      dataType="wstr"
+                      length="100"
+                      name="agent_name" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[BookedYear]"
+                      dataType="i4"
+                      name="BookedYear" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[BookedMonth]"
+                      dataType="i4"
+                      name="BookedMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].ExternalColumns[TotalBooked]"
+                      dataType="i4"
+                      name="TotalBooked" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[Business]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[Business]"
+                      name="Business" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[agent_code]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[agent_code]"
+                      name="agent_code" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[agent_name]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[agent_name]"
+                      name="agent_name" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[BookedYear]"
+                      dataType="i4"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[BookedYear]"
+                      name="BookedYear" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[BookedMonth]"
+                      dataType="i4"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[BookedMonth]"
+                      name="BookedMonth" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[TotalBooked]"
+                      dataType="i4"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[TotalBooked]"
+                      name="TotalBooked" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Created Monthly Volume CSV\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;10"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="10">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public Output0Buffer Output0Buffer;
+
+    int InputsFinished = 0;
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+        if (Buffer.EndOfRowset)
+        {
+            InputsFinished = InputsFinished + 1;
+            if (InputsFinished == 1)
+            {
+                FinishOutputs();
+                MarkOutputsFinished();
+            }
+        }
+
+    }
+
+    public virtual void FinishOutputs()
+    {
+    }
+
+    private void MarkOutputsFinished()
+    {
+
+        if (null != Output0Buffer)
+        {
+            Output0Buffer.SetEndOfRowset();
+            Output0Buffer = null;
+        }
+
+    }
+
+    public override void PrimeOutput(int Outputs, int[] OutputIDs, PipelineBuffer[] Buffers, OutputNameMap OutputMap)
+    {
+       for(int Idx = 0; Idx < Outputs; Idx++)
+       {
+            if(OutputIDs[Idx] == GetOutputID(OutputMap, @"Output 0"))
+            {
+                Output0Buffer = new Output0Buffer(Buffers[Idx], GetColumnIndexes(OutputIDs[Idx]), OutputMap);
+            }
+        }
+
+        CreateNewOutputRows();
+
+    }
+
+    public virtual void CreateNewOutputRows()
+    {
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Output0Buffer.AddRow();
+        Output0Buffer.AccountId = "";
+        Output0Buffer.AccountNetCode = Row.agentcode + "-" + Row.Business;
+        Output0Buffer.BookedMonth = Row.BookedMonth;
+        Output0Buffer.BookedYear = Row.BookedYear;
+        Output0Buffer.MVId = Row.agentcode + "-" + Row.Business + "-" + Row.BookedMonth + "-" + Row.BookedYear;
+        Output0Buffer.TotalContracts = Row.TotalBooked;
+    }
+
+    public override void CreateNewOutputRows()
+    {
+        /*
+          Add rows by calling the AddRow method on the member variable named "<Output Name>Buffer".
+          For example, call MyOutputBuffer.AddRow() if your output was named "MyOutput".
+        */
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String Business
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+    }
+    public bool Business_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String agentcode
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[1]);
+        }
+    }
+    public bool agentcode_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public String agentname
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[2]);
+        }
+    }
+    public bool agentname_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+    }
+
+    public Int32 BookedYear
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[3]);
+        }
+    }
+    public bool BookedYear_IsNull
+    {
+        get
+        {
+            return IsNull(3);
+        }
+    }
+
+    public Int32 BookedMonth
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[4]);
+        }
+    }
+    public bool BookedMonth_IsNull
+    {
+        get
+        {
+            return IsNull(4);
+        }
+    }
+
+    public Int32 TotalBooked
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[5]);
+        }
+    }
+    public bool TotalBooked_IsNull
+    {
+        get
+        {
+            return IsNull(5);
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+
+public class Output0Buffer: ScriptBuffer
+
+{
+    public Output0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String AccountId
+    {
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool AccountId_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 TotalContracts
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool TotalContracts_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String MVId
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool MVId_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String AccountNetCode
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool AccountNetCode_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 BookedMonth
+    {
+        set
+        {
+            this[4] = value;
+        }
+    }
+    public bool BookedMonth_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(4);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 BookedYear
+    {
+        set
+        {
+            this[5] = value;
+        }
+    }
+    public bool BookedYear_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(5);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public void AddRow()
+    {
+        base.AddRow();
+    }
+
+    new public void SetEndOfRowset()
+    {
+        base.SetEndOfRowset();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5786c0cc843f468b844d024e752b382a.Properties.Settings.get_Default():SC_5786c0cc843f468b844d024e752b382a.Properties.Sett" +
+    "ings")]
+
+namespace SC_5786c0cc843f468b844d024e752b382a.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_5786c0cc843f468b844d024e752b382a.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{377b25de-ac1a-4c3f-be4d-69dfa0f09198}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_5786c0cc843f468b844d024e752b382a</RootNamespace>
+    <AssemblyName>SC_5786c0cc843f468b844d024e752b382a</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_5786c0cc843f468b844d024e752b382a" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>SC_5786c0cc843f468b844d024e752b382a</msb:CodeName>
+		<msb:DisplayName>SC_5786c0cc843f468b844d024e752b382a</msb:DisplayName>
+		<msb:ProjectId>{E8010B30-F2D4-4271-AE91-7557BBF2B1E6}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_5786c0cc843f468b844d024e752b382a.csproj"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_5786c0cc843f468b844d024e752b382a")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_5786c0cc843f468b844d024e752b382a")]
+[assembly: AssemblyCopyright("Copyright @  2017")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5786c0cc843f468b844d024e752b382a.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5786c0cc843f468b844d024e752b382a.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5786c0cc843f468b844d024e752b382a.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_5786c0cc843f468b844d024e752b382a.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_5786c0cc843f468b844d024e752b382a.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_5786c0cc843f468b844d024e752b382a.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[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
+AADGAAsIxAAUADghAAAAAMYBPQcGABgAcyMAAAAAgQB6AAYAGACQIwAAAADGABgIzgAYADghAAAA
+AMYBSwcGABwA2SMAAAAAxgEECLEAHAA4IQAAAADGASsIsQAdAOwjAAAAAIYY7gXaAB4A+yMAAAAA
+hhjuBdoAHwAKJAAAAACDGO4FBgAgABIkAAAAAJMI2gXgACAAPiQAAAAAkwgxAeUAIABFJAAAAACT
+CD0B6gAgAE0kAAAAAJYIjAfwACEAVCQAAAAAhhjuBQYAIQBcJAAAAACRGPQF9QAhAAAAAQBGCAAA
+AQDTBQAAAgDUBgAAAwB7BQAAAQDTBQAAAgDUBgAAAwB7BQAAAQA7AwAAAQA7AwAAAQA7AwAAAQA7
+AwAAAQA7AwAAAQA7AwAAAQA7AwAAAQA7AwAAAQA7AwAAAQA7AwAAAQA7AwAAAQA7AwAAAQATAAAA
+AgDzAAAAAwDTBQAABAB7BQAAAQBDBwAAAgD7BQAAAwAVBwAABAB7BQAAAQDTBQAAAQBGCAAAAQC8
+BwAAAQC8BwAAAQA7AwkA7gUBABEA7gUGABkA7gUKACkA7gUQADEA7gUQADkA7gUQAEEA7gUQAEkA
+7gUQAFEA7gUQAFkA7gUQAGEA7gUQAGkA7gUGAJkA7gUGALkA7gUVAMkA7gUGAIkAJAMGAIkALwMG
+ANEAXwcbANEAXwciAHEA7gUoAHEA0wUyAHEA1AY2AHkAWwM6AHEAxAQ/AHkAAQBEAHEAQghJAHEA
+gAdJAHEA0wRNAHEAywQBAOEA7gUQAHEAJAgGAHEAfQcGAIkA7gUGANEAAgdTAIkA6AZaAHkAbQdJ
+AIkAGwBkAJEA7gUGAPEA4QBrAPEASghyAKEA7gV4AMEA7gUGAC4ACwAUAS4AEwAdAS4AGwA8AS4A
+IwBFAS4AKwBuAS4AMwBuAS4AOwBuAS4AQwBFAS4ASwB0AS4AUwBuAS4AWwCLAUMAYwDVAQMBawDV
+ASEBewDVASkDcwA8AUkDcwA8AWAAAwABAAQADQAIABkACQAbAAAAIQf5AAAAoQT9AAAAxQD5AAAA
+HQT9AAAAAQH5AAAAMgT9AAAAmAUBAQAAiwT9AAAAeQMBAQAAXgT9AAAAkgABAQAA7AP9AAAAYQD5
+AAAA1wP9AAAALgcBAQAAtQT9AAAAWAD5AAAAxwP9AAAAsgD5AAAAAwT9AAAAeQMBAQAAXgT9AAAA
+mAUBAQAAiwT9AAAA3gUFAQAAUQEKAQAAkAcPAQIABwADAAIACAAFAAIACQAHAAIACgAJAAIACwAL
+AAIADAANAAIADQAPAAIADgARAAIADwATAAIAEAAVAAIAEQAXAAIAEgAZAAEAFgAbAAEAFwAdAAEA
+GAAfAAEAGQAhAAEAGgAjAAEAGwAlAAEAHAAnAAEAHQApAAEAHgArAAEAHwAtAAEAIAAvAAEAIQAx
+AAIAMAAzAAIAMQA1AAEAMgA1AAIAMwA3AASAAAABAAAAAAAAAAAAAAAAACcAAAAEAAAAAAAAAAAA
+AACAAEsAAAAAAA0AAAAAAAAAAAAAAIkAxgcAAAAADQAAAAAAAAAAAAAAiQDjBwAAAAAEAAAAAAAA
+AAAAAACAANwEAAAAAAAAAAABAAAASQYAAAAAAEdldEludDMyADxNb2R1bGU+AElucHV0SUQAR2V0
+T3V0cHV0SUQAU0NfNTc4NmMwY2M4NDNmNDY4Yjg0NGQwMjRlNzUyYjM4MmEAbXNjb3JsaWIAc2V0
+X01WSWQAc2V0X0FjY291bnRJZABJbnB1dHNGaW5pc2hlZABNYXJrT3V0cHV0c0ZpbmlzaGVkAGdl
+dF9Ub3RhbEJvb2tlZABkZWZhdWx0SW5zdGFuY2UAc2V0X0FjY291bnROZXRDb2RlAGdldF9hZ2Vu
+dGNvZGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1lAGdldF9h
+Z2VudG5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBnZXRfQ3VsdHVy
+ZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRp
+dG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25V
+c2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJp
+YnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRh
+cmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNz
+ZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRl
+AEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lT
+U2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1
+dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQB2
+YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAEdldFN0cmluZwBnZXRfQm9va2VkTW9udGgA
+c2V0X0Jvb2tlZE1vbnRoAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ181Nzg2YzBjYzg0M2Y0Njhi
+ODQ0ZDAyNGU3NTJiMzgyYS5kbGwAc2V0X01WSWRfSXNOdWxsAHNldF9BY2NvdW50SWRfSXNOdWxs
+AGdldF9Ub3RhbEJvb2tlZF9Jc051bGwAc2V0X0FjY291bnROZXRDb2RlX0lzTnVsbABnZXRfYWdl
+bnRjb2RlX0lzTnVsbABnZXRfYWdlbnRuYW1lX0lzTnVsbABnZXRfQm9va2VkTW9udGhfSXNOdWxs
+AHNldF9Cb29rZWRNb250aF9Jc051bGwAZ2V0X0Jvb2tlZFllYXJfSXNOdWxsAHNldF9Cb29rZWRZ
+ZWFyX0lzTnVsbABnZXRfQnVzaW5lc3NfSXNOdWxsAHNldF9Ub3RhbENvbnRyYWN0c19Jc051bGwA
+U2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29u
+ZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlk
+T3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUluZm8AT3V0cHV0TmFt
+ZU1hcABPdXRwdXRNYXAAZ2V0X0Jvb2tlZFllYXIAc2V0X0Jvb2tlZFllYXIASW5wdXQwQnVmZmVy
+AE91dHB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1h
+bmFnZXIALmN0b3IALmNjdG9yAE91dHB1dElEcwBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1
+bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDXzU3ODZjMGNjODQzZjQ2
+OGI4NDRkMDI0ZTc1MmIzODJhLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dp
+bmdNb2RlcwBTQ181Nzg2YzBjYzg0M2Y0NjhiODQ0ZDAyNGU3NTJiMzgyYS5Qcm9wZXJ0aWVzAFZh
+cmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MARXF1
+YWxzAENvbm5lY3Rpb25zAEJ1ZmZlcnMAZ2V0X0J1c2luZXNzAHNldF9Ub3RhbENvbnRyYWN0cwBG
+aW5pc2hPdXRwdXRzAENyZWF0ZU5ld091dHB1dFJvd3MAQ29uY2F0AE9iamVjdABnZXRfRW5kT2ZS
+b3dzZXQAU2V0RW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21w
+b25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9z
+b2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABQcmltZU91dHB1
+dABBZGRSb3cASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93AGdldF9Bc3NlbWJseQAAAAEA
+Ay0AAYCbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAg
+AHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUA
+IAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0
+ACAAMAAAEU8AdQB0AHAAdQB0ACAAMAAAcVMAQwBfADUANwA4ADYAYwAwAGMAYwA4ADQAMwBmADQA
+NgA4AGIAOAA0ADQAZAAwADIANABlADcANQAyAGIAMwA4ADIAYQAuAFAAcgBvAHAAZQByAHQAaQBl
+AHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAwWWTU9LMKk2Fr0DZF9QiiQAEIAEBCAMgAAEFIAEBEREE
+IAEBDgUgAQERWQYAAw4ODg4FAAEOHRwJIAMBEj0dCBJBAwYSPQMGHQgEIAEOCAQgAQIIBCABCAgD
+IAACBSACAQgcBiACAg4RdQUgAR0ICAMHAQgGAAIIEkEOBgABEnkRfQUgABKAgQcgAgEOEoCBCLd6
+XFYZNOCJCImEXc2AgMyRAwYSGAMGEhwDBhIQAgYIAwYSRQMGElEDBhJVAwYSJAUgAQESDAMgAA4D
+IAAIBCABAQIJIAQBCA4SPRJBCyAEAQgdCB0SPRJBBSABARJFBAAAElEEAAASVQUAAQESVQQAABIk
+AwAAAQMoAA4DKAACAygACAQIABJRBAgAElUECAASJAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4
+Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfNTc4NmMwY2M4NDNmNDY4Yjg0NGQwMjRlNzUy
+YjM4MmEAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAxNwAASQEAGi5ORVRGcmFtZXdvcmssVmVy
+c2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjUEAQAA
+AAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2Nv
+cmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3
+N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAA
+AAAAAABQQURQQURQtAAAANQ5AAAAAAAAAAAAAO45AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg
+OQAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
+ABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAA
+WEAAAOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9
+BO/+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEA
+VgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAA
+AAAAsARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAA
+NABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBO
+AGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMA
+QwBfADUANwA4ADYAYwAwAGMAYwA4ADQAMwBmADQANgA4AGIAOAA0ADQAZAAwADIANABlADcANQAy
+AGIAMwA4ADIAYQAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4A
+MAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8ANQA3ADgANgBjADAAYwBj
+ADgANAAzAGYANAA2ADgAYgA4ADQANABkADAAMgA0AGUANwA1ADIAYgAzADgAMgBhAC4AZABsAGwA
+AABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAg
+AEAAIAAgADIAMAAxADcAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAA
+AAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwA1ADcAOAA2
+AGMAMABjAGMAOAA0ADMAZgA0ADYAOABiADgANAA0AGQAMAAyADQAZQA3ADUAMgBiADMAOAAyAGEA
+LgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8ANQA3ADgANgBj
+ADAAYwBjADgANAAzAGYANAA2ADgAYgA4ADQANABkADAAMgA0AGUANwA1ADIAYgAzADgAMgBhAAAA
+NAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAAB
+AEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAAAAOgAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_5786c0cc843f468b844d024e752b382a</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum"
+                  typeConverter="NOTBROWSABLE">9e9d555577a92d2dce6a06fbe3def0a6</property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataShaChecksum"
+                  typeConverter="NOTBROWSABLE">59e9082558f77ee22229a5d0c9afc59561c81b40</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Created Monthly Volume CSV\Script Component.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Inputs[Input 0].Columns[Business]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Business"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[Business]" />
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Inputs[Input 0].Columns[agent_code]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="agent_code"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[agent_code]" />
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Inputs[Input 0].Columns[agent_name]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="agent_name"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[agent_name]" />
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Inputs[Input 0].Columns[BookedYear]"
+                      cachedDataType="i4"
+                      cachedName="BookedYear"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[BookedYear]" />
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Inputs[Input 0].Columns[BookedMonth]"
+                      cachedDataType="i4"
+                      cachedName="BookedMonth"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[BookedMonth]" />
+                    <inputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Inputs[Input 0].Columns[TotalBooked]"
+                      cachedDataType="i4"
+                      cachedName="TotalBooked"
+                      lineageId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output].Columns[TotalBooked]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0]"
+                  hasSideEffects="true"
+                  name="Output 0">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[AccountId]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[AccountId]"
+                      name="AccountId" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[TotalContracts]"
+                      dataType="i4"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[TotalContracts]"
+                      name="TotalContracts" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[MVId]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[MVId]"
+                      name="MVId" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[AccountNetCode]"
+                      codePage="20127"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[AccountNetCode]"
+                      name="AccountNetCode" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[BookedMonth]"
+                      dataType="i4"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[BookedMonth]"
+                      name="BookedMonth" />
+                    <outputColumn
+                      refId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[Booked Year]"
+                      dataType="i4"
+                      lineageId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0].Columns[Booked Year]"
+                      name="Booked Year" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Created Monthly Volume CSV.Paths[OLE DB Source Output]"
+              endId="Package\Created Monthly Volume CSV\Script Component.Inputs[Input 0]"
+              name="OLE DB Source Output"
+              startId="Package\Created Monthly Volume CSV\Get Monthly Volume Data.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Created Monthly Volume CSV.Paths[Output 0]"
+              endId="Package\Created Monthly Volume CSV\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Output 0"
+              startId="Package\Created Monthly Volume CSV\Script Component.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Update Query Variables"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -29761,6 +31462,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Upsert Admin Monthly Volume"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{022CB5D7-8A26-447F-AD91-8D7B4883D2D5}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Upsert Admin Monthly Volume"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="\\plinkdc1\home\IT\Development\SFLoadFiles\SSIS Data Loader\UpsertMonthlyVolume.bat" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Upsert Seller Accounts"
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:Description="Execute Process Task"
@@ -29842,6 +31559,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 11"
       DTS:To="Package\Upsert Admin Contact Email Error" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
+      DTS:CreationName=""
+      DTS:DTSID="{50134599-9FA5-4A3F-B3CC-9EE76B76B6F6}"
+      DTS:From="Package\Upsert Admin Contact Email Error"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 12"
+      DTS:To="Package\Created Monthly Volume CSV" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 13]"
+      DTS:CreationName=""
+      DTS:DTSID="{C7ED6146-0C28-44DD-997F-5EFC8EA773A6}"
+      DTS:From="Package\Created Monthly Volume CSV"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 13"
+      DTS:To="Package\Upsert Admin Monthly Volume" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -30227,6 +31960,58 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Created Monthly Volume CSV"
+          TopLeft="342,467" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="294,486.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48,0"
+              Start="0,0"
+              End="40.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="222,42"
+          Id="Package\Upsert Admin Monthly Volume"
+          TopLeft="337,540" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 13]"
+          TopLeft="449.25,509">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30888,5 +32673,77 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\Created Monthly Volume CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Created Monthly Volume CSV\Get Monthly Volume Data"
+          TopLeft="210,24" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Created Monthly Volume CSV\Script Component"
+          TopLeft="473,27" />
+        <EdgeLayout
+          Id="Package\Created Monthly Volume CSV.Paths[OLE DB Source Output]"
+          TopLeft="410,46.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63,0"
+              Start="0,0"
+              End="55.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="55.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Created Monthly Volume CSV\Flat File Destination"
+          TopLeft="709,28" />
+        <EdgeLayout
+          Id="Package\Created Monthly Volume CSV.Paths[Output 0]"
+          TopLeft="636,48.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73,0"
+              Start="0,0"
+              End="65.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="65.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Created Monthly Volume CSV\Get Monthly Volume Data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
