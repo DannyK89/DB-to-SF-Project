@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">OMNI-LAP11</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0Inq66oKy0GNeK68K7xbYgAAAAACAAAAAAADZgAAwAAAABAAAADGZ1p7rVDnBdizsoBeGCbtAAAAAASAAACgAAAAEAAAAE5M/DNF25aMjA15kIhJDE6IAAAAZstlazp6frAiUGYCv4rCAa6LUlLTcSNFxSnzvjcpsfjUK9avvS7bra/z6YZh4BPDR1WB97B+gYfQ3x7il6Fk3JT3sJuBIqREt0+VsI4r6NWBrIK+6INTUVuz2DgH7WIl5dDT7vaVhUSHDZhyDZLx1d7qpzy3JUGqx4647G8xnEu95vmbIe8smBQAAAB6Zx2/BPjT8F/YXJ+Va1CO1FQvYA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0Inq66oKy0GNeK68K7xbYgAAAAACAAAAAAADZgAAwAAAABAAAADaiyt9GUYCfnUUM90KqmpEAAAAAASAAACgAAAAEAAAAB3lU5lDHjeaYNi01d0k9BCIAAAAPQ00PjmYgoVhoY99Sp6ry8amlOfqLIrxUOfH71rz8kfvjLUcWJv4kM75poNBCa+/CsVUe9ZMSC8uL1ympxscFP6zGGnT1cYEeQ4hemBJmZxcGMgCPUIWcGTZp43RolHUfkWi9yE6I5Q6GCjA9uGc1JLA0iHFpwYIlLJe/mjmSPVUdshsEj7kOBQAAACWLdsaqp5TiZu2YCaGznAUhUoNUg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">71</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">95</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C82A40B5-4DBB-4F89-9A62-02AF7B1C4ADE}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{43198F03-AC8C-48E9-85B9-3FF63818CC0D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1776,6 +1776,552 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.AlwaysCheckForRowDelimiters">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.CodePage">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1252</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.ColumnNamesInFirstDataRow">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">\\plinkdc1\home\IT\Development\SFLoadFiles\SSIS Data Loader\CSV Files\RateDetail.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.DataRowsToSkip">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.Format">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Delimited</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.HeaderRowDelimiter">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property xml:space="preserve" SSIS:Name="Value">
+</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.HeaderRowsToSkip">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.LocaleID">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1033</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.RowDelimiter">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.TextQualifier">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">"</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Detail CSV.Unicode">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.AlwaysCheckForRowDelimiters">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.CodePage">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1252</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.ColumnNamesInFirstDataRow">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">\\plinkdc1\home\IT\Development\SFLoadFiles\SSIS Data Loader\CSV Files\RateLineItem.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.DataRowsToSkip">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.Format">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Delimited</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.HeaderRowDelimiter">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property xml:space="preserve" SSIS:Name="Value">
+</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.HeaderRowsToSkip">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.LocaleID">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1033</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.RowDelimiter">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.TextQualifier">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">"</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Line Item CSV.Unicode">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.AlwaysCheckForRowDelimiters">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.CodePage">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1252</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.ColumnNamesInFirstDataRow">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">\\plinkdc1\home\IT\Development\SFLoadFiles\SSIS Data Loader\CSV Files\RateTable.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.DataRowsToSkip">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.Format">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Delimited</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.HeaderRowDelimiter">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property xml:space="preserve" SSIS:Name="Value">
+</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.HeaderRowsToSkip">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.LocaleID">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1033</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.RowDelimiter">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.TextQualifier">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">"</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Rate Table CSV.Unicode">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.Seller Account CSV.AlwaysCheckForRowDelimiters">
